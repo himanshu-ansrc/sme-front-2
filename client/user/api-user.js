@@ -47,6 +47,14 @@ const update = (params, credentials, user) => {
   }).catch((err) => console.log(err))
 }
 
+const fetchTweets = async (tweetWord)=>{
+     const tweets = await fetch('/api/tweets/?'+tweetWord, { method: 'GET', headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'        }
+      });
+      return tweets.json();
+}
+
 const remove = (params, credentials) => {
   return fetch('/api/users/' + params.userId, {
     method: 'DELETE',
@@ -65,5 +73,6 @@ export {
   list,
   read,
   update,
-  remove
+  remove,
+  fetchTweets
 }

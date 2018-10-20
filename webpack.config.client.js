@@ -7,9 +7,10 @@ const config = {
     mode: "development",
     devtool: 'eval-source-map',
     entry: [
+        'babel-polyfill',
         'react-hot-loader/patch',
         'webpack-hot-middleware/client?reload=true',
-        path.join(CURRENT_WORKING_DIR, 'client/main.js')
+         path.join(CURRENT_WORKING_DIR, 'client/main.js')
     ],
     output: {
         path: path.join(CURRENT_WORKING_DIR , '/dist'),

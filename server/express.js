@@ -8,6 +8,7 @@ import helmet from 'helmet'
 import Template from './../template'
 import userRoutes from './routes/user.routes'
 import authRoutes from './routes/auth.routes'
+import tweetRoutes from './routes/tweet.routes'
 
 // modules for server side rendering
 import React from 'react'
@@ -45,6 +46,7 @@ app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 // mount routes
 app.use('/', userRoutes)
 app.use('/', authRoutes)
+app.use('/', tweetRoutes)
 
 app.get('*', (req, res) => {
    const sheetsRegistry = new SheetsRegistry()
