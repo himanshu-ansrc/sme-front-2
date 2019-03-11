@@ -21,6 +21,7 @@ const config = {
                 exclude: /node_modules/,
                 use: [ 'babel-loader' ]
             },
+            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
             {
                 test: /\.(ttf|eot|svg|gif|jpg|png)(\?[\s\S]+)?$/,
                 use: 'file-loader'
