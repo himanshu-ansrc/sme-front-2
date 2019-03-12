@@ -33,9 +33,9 @@ const config = {
                  }
                ]
              },
-             { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' },
+             { test: /\.(png|woff|woff2|eot|ttf|svg|eot-fvbane)$/, loader: 'url-loader?limit=100000' },
             {
-                test: /\.(ttf|eot|svg|gif|jpg|png)(\?[\s\S]+)?$/,
+                test: /\.(ttf|eot|svg|gif|jpg|png|eot-fvbane)(\?[\s\S]+)?$/,
                 use: 'file-loader'
             }
         ]

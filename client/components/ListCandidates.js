@@ -9,7 +9,7 @@ class CandidatesList extends Component{
       	 return(
             <Fragment>
                     <Header2/>
-				    <div className="alice-bg padding-top-70 padding-bottom-70">
+				    <div className="alice-bg padding-top-35 padding-bottom-35">
 				      <div className="container">
 				        <div className="row">
 				          <div className="col-md-6">

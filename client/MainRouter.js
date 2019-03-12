@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react'
 import {Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import ListCandidates from './components/ListCandidates'
+import DetailCandidates from './components/CandidateProfile'
 
 class MainRouter extends Component {
   render() {
@@ -10,6 +11,7 @@ class MainRouter extends Component {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/list-candidates" component={ListCandidates}/>
+        <Route path="/detail-candidates" component={DetailCandidates}/>
       </Switch>
     </Fragment>)
   }
