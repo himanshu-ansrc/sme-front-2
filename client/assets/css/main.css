@@ -462,7 +462,7 @@ a:focus {
   padding: 0;
   color: #ffffff;
   outline: none;
-  width: calc(50% - 110px);
+  width: 60%;
   margin-right: 30px;
 }
 
@@ -9553,6 +9553,14 @@ header .absolute-nav {
   font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
   margin-right: 5px;
+}
+
+.mrgn-ryt-30{
+   margin-right: 30px;
+}
+
+.black-txt{
+   color: #6f7484 !important;
 }
 
 @media all and (max-width: 991px) {

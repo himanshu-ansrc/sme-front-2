@@ -76,7 +76,7 @@ class Footer extends Component{
 				                  </div>
 				                  <div className="col-lg-6">
 				                    <div className="back-to-top">
-				                      <a href="home-4.html#">Back to top<i className="fas fa-angle-up"></i></a>
+				                      <a href="#">Back to top<i className="fas fa-angle-up"></i></a>
 				                    </div>
 				                  </div>
 				                </div>
@@ -86,23 +86,6 @@ class Footer extends Component{
 				        </div>
 				      </div>
 				    </footer>
-				    <script src="http://themerail.com/html/oficiona/assets/js/jquery.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/popper.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/bootstrap.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/feather.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/bootstrap-select.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/jquery.nstSlider.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/owl.carousel.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/visible.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/jquery.countTo.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/chart.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/plyr.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/tinymce.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/slick.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/js/jquery.ajaxchimp.min.js"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/custom.js"></script>
-				    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC87gjXWLqrHuLKR0CTV5jNLdP4pEHMhmg"></script>
-				    <script src="http://themerail.com/html/oficiona/assets/map.js"></script>
             </Fragment>
     	 )
     }

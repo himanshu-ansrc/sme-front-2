@@ -252,18 +252,8 @@ class Header extends Component{
 						              <div className="banner-search">
 						                <form action="home-4.html#" className="search-form">
 						                  <input type="text" placeholder="Enter Keywords" />
-						                  <select className="selectpicker" id="search-location">
-						                    <option value="" selected>Location</option>
-						                    <option value="california">California</option>
-						                    <option value="las-vegas">Las Vegas</option>
-						                    <option value="new-work">New Work</option>
-						                    <option value="carolina">Carolina</option>
-						                    <option value="chicago">Chicago</option>
-						                    <option value="silicon-vally">Silicon Vally</option>
-						                    <option value="washington">Washington DC</option>
-						                    <option value="neveda">Neveda</option>
-						                  </select>
-						                  <button className="button primary-bg"><i className="fas fa-search"></i>Search Job</button>
+						                  <button className="button primary-bg mrgn-ryt-30">Search</button>
+						                  <button className="button white-bg black-txt">Advanced Search</button>
 						                </form>
 						                <div className="trending-key">
 						                  <span>Trending Keywords:</span>
