@@ -1,7 +1,21 @@
 import React, {Component, Fragment} from 'react'
 import './Externals.js'
+import { Link , Redirect} from 'react-router-dom'
+
+import {connect}  from 'react-redux'
+import * as actions from '../../actions'
 
 class Header extends Component{
+	constructor(){
+		super();
+		this.state = {
+			 toList: false, searchKeys: ''
+		}
+	}
+    searchCandidates = (e)=>{   
+       e.preventDefault();
+       window.location.href = "/list-candidates?"+this.state.searchKeys;
+    }
     render(){
     	 return(
             <Fragment>
@@ -13,7 +27,6 @@ class Header extends Component{
 				        <button className="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				          <span className="navbar-toggler-icon"></span>
 				        </button>
-
 				        <div className="collapse navbar-collapse" id="navbarSupportedContent">
 				          <ul className="navbar-nav mr-auto job-browse">
 				            <li className="nav-item dropdown">
@@ -47,64 +60,6 @@ class Header extends Component{
 				            </li>
 				          </ul>
 				          <ul className="navbar-nav ml-auto main-nav">
-				            <li className="menu-item active"><a title="Home" href="home-1.html">Home</a></li>
-				            <li className="menu-item dropdown">
-				              <a title="" href="home-4.html#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Jobs</a>
-				              <ul  className="dropdown-menu">
-				                <li className="menu-item"><a  href="job-listing.html">Job Listing</a></li>
-				                <li className="menu-item"><a  href="job-listing-with-map.html">Job Listing With Map</a></li>
-				                <li className="menu-item"><a  href="job-details.html">Job Details</a></li>
-				                <li className="menu-item"><a  href="post-job.html">Post Job</a></li>
-				              </ul>
-				            </li>
-				            <li className="menu-item dropdown">
-				              <a title="" href="home-4.html#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Employer</a>
-				              <ul  className="dropdown-menu">
-				                <li className="menu-item"><a  href="employer-listing.html">Employer Listing</a></li>
-				                <li className="menu-item"><a  href="employer-details.html">Employer Details</a></li>
-				                <li className="menu-item"><a  href="employer-dashboard.html">Dashboard</a></li>
-				                <li className="menu-item"><a  href="employer-dashboard-edit-profile.html">Edit Profile</a></li>
-				                <li className="menu-item"><a  href="employer-dashboard-manage-candidate.html">Manage Candidate</a></li>
-				                <li className="menu-item"><a  href="employer-dashboard-manage-job.html">Manage Job</a></li>
-				                <li className="menu-item"><a href="employer-dashboard-message.html">Message</a></li>
-				                <li className="menu-item"><a href="employer-dashboard-pricing.html">Pricing</a></li>
-				                <li className="menu-item"><a  href="employer-dashboard-post-job.html">Post Job</a></li>
-				              </ul>
-				            </li>
-				            <li className="menu-item dropdown">
-				              <a title="" href="home-4.html#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Candidate</a>
-				              <ul  className="dropdown-menu">
-				                <li className="menu-item"><a  href="candidate.html">Candidate List</a></li>
-				                <li className="menu-item"><a  href="candidate-details.html">Candidate Details</a></li>
-				                <li className="menu-item"><a  href="dashboard.html">Dashboard</a></li>
-				                <li className="menu-item"><a  href="dashboard-edit-profile.html">Edit Profile</a></li>
-				                <li className="menu-item"><a  href="add-resume.html">Add Resume</a></li>
-				                <li className="menu-item"><a  href="resume.html">Resume</a></li>
-				                <li className="menu-item"><a  href="edit-resume.html">Edit Resume</a></li>
-				                <li className="menu-item"><a  href="dashboard-bookmark.html">Bookmarked</a></li>
-				                <li className="menu-item"><a  href="dashboard-applied.html">Applied</a></li>
-				                <li className="menu-item"><a  href="dashboard-pricing.html">Pricing</a></li>
-				                <li className="menu-item"><a  href="dashboard-message.html">Message</a></li>
-				                <li className="menu-item"><a  href="dashboard-alert.html">Alert</a></li>
-				              </ul>
-				            </li>
-				            <li className="menu-item dropdown">
-				              <a title="" href="home-4.html#" data-toggle="dropdown" className="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Pages</a>
-				              <ul  className="dropdown-menu">
-				                <li className="menu-item"><a  href="about-us.html">About Us</a></li>
-				                <li className="menu-item"><a  href="blog.html">Blog</a></li>
-				                <li className="menu-item"><a  href="blog-grid.html">Blog Grid</a></li>
-				                <li className="menu-item"><a  href="blog-details.html">Blog Details</a></li>
-				                <li className="menu-item"><a  href="contact.html">Contact Us</a></li>
-				                <li className="menu-item"><a  href="pricing.html">Pricing</a></li>
-				                <li className="menu-item"><a  href="how-it-work.html">How It Works</a></li>
-				                <li className="menu-item"><a  href="faq.html">FAQ</a></li>
-				                <li className="menu-item"><a  href="checkout.html">Checkout</a></li>
-				                <li className="menu-item"><a  href="payment-complete.html">Payment Complete</a></li>
-				                <li className="menu-item"><a  href="invoice.html">Invoice</a></li>
-				                <li className="menu-item"><a  href="terms-and-condition.html">Terms And Condition</a></li>
-				              </ul>
-				            </li>
 				            <li className="menu-item post-job"><a title="Title" href="post-job.html"><i className="fas fa-plus"></i>Post a Job</a></li>
 				          </ul>
 				          <ul className="navbar-nav ml-auto account-nav">
@@ -120,21 +75,6 @@ class Header extends Component{
 				                  <a href="home-2.html" className="notification-list">
 				                    <i className="fas fa-bolt"></i>
 				                    <p>Your Resume Updated!</p>
-				                    <span className="time">5 hours ago</span>
-				                  </a>
-				                  <a href="home-4.html#" className="notification-list">
-				                    <i className="fas fa-arrow-circle-down"></i>
-				                    <p>Someone downloaded resume</p>
-				                    <span className="time">11 hours ago</span>
-				                  </a>
-				                  <a href="home-4.html#" className="notification-list">
-				                    <i className="fas fa-check-square"></i>
-				                    <p>You applied for Project Manager <span>@homeland</span></p>
-				                    <span className="time">11 hours ago</span>
-				                  </a>
-				                  <a href="home-4.html#" className="notification-list">
-				                    <i className="fas fa-user"></i>
-				                    <p>You changed password</p>
 				                    <span className="time">5 hours ago</span>
 				                  </a>
 				                  <a href="home-4.html#" className="notification-list">
@@ -251,8 +191,8 @@ class Header extends Component{
 						              <p> Find Jobs, Employment & Career Opportunities</p>
 						              <div className="banner-search">
 						                <form action="home-4.html#" className="search-form">
-						                  <input type="text" placeholder="Enter Keywords" />
-						                  <button className="button primary-bg mrgn-ryt-30">Search</button>
+						                  <input type="text" placeholder="Enter Keywords" onChange={(e)=>this.setState({searchKeys: e.target.value})}/>
+						                  <button className="button primary-bg mrgn-ryt-30" onClick={this.searchCandidates}>Search</button>
 						                  <button className="button white-bg black-txt">Advanced Search</button>
 						                </form>
 						                <div className="trending-key">
@@ -270,14 +210,13 @@ class Header extends Component{
 						        </div>
 						      </div>
 						    </div>
-
             </Fragment>
     	 )
     }
 }
 
 
-export default Header;
+export default connect(state=>state, actions)(Header);
 
 
 

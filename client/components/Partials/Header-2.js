@@ -1,7 +1,12 @@
 import React, {Component, Fragment} from 'react'
 import './Externals.js'
+import {connect}  from 'react-redux'
+import * as actions from '../../actions'
 
 class Header2 extends Component{
+	  componentDidMount(){
+	  	 console.log(this.props)
+	  }
       render(){
       	 return (
             <Fragment>
@@ -11,7 +16,7 @@ class Header2 extends Component{
 						          <div className="col">
 						            <div className="header-top">
 						              <div className="logo-area">
-						                <a href="candidate.html#"><img src="images/logo-2.png" alt="" /></a>
+						                <a href="/"><img src="" alt="" /></a>
 						              </div>
 						              <div className="header-top-toggler">
 						                <div className="header-top-toggler-button"></div>
@@ -75,10 +80,6 @@ class Header2 extends Component{
 						                    </ul>
 						                  </div>
 						                </div>
-						                <select className="selectpicker select-language" data-width="fit">
-						                  <option data-content='<span className="flag-icon flag-icon-us"></span> English'>English</option>
-						                  <option  data-content='<span className="flag-icon flag-icon-mx"></span> Español'>Español</option>
-						                </select>
 						              </div>
 						            </div>
 						          </div>
@@ -91,4 +92,4 @@ class Header2 extends Component{
 }
 
 
-export default Header2;
+export default connect(state=>state, actions)(Header2);

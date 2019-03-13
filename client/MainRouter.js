@@ -10,8 +10,9 @@ class MainRouter extends Component {
      <Fragment>
       <Switch>
         <Route exact path="/" component={Home}/>
+        <Route path="/list-candidates/:keys" component={ListCandidates}/>
         <Route path="/list-candidates" component={ListCandidates}/>
-        <Route path="/detail-candidates" component={DetailCandidates}/>
+        <Route path="/detail-candidates/:user_id" component={DetailCandidates}/>
       </Switch>
     </Fragment>)
   }

@@ -2,9 +2,18 @@ import React, {Component, Fragment} from 'react'
 import Header2 from './Partials/Header-2'
 import Footer from './Partials/Footer'
 import './Partials/Externals.js'
-
+import {connect} from 'react-redux'
+import * as actions from '../actions'
 
 class CandidatesProfile extends Component{
+	  constructor(){
+	  	 super();
+	  }
+	  componentDidMount(){
+	  	 const userId = (this.props.match.params.user_id).trim();
+	  	 this.props.candidates_list(userId, ()=>{
+         })     
+	  }
       render(){
       	 return(
             <Fragment>
@@ -13,6 +22,9 @@ class CandidatesProfile extends Component{
 				      <div className="container">
 				        <div className="row">
 				          <div className="col">
+
+
+                           
 				            <div className="candidate-details">
 				              <div className="title-and-info">
 				                <div className="title">
@@ -251,6 +263,8 @@ class CandidatesProfile extends Component{
 				                </div>
 				              </div>
 				            </div>
+
+
 				          </div>
 				        </div>
 				      </div>
@@ -261,8 +275,6 @@ class CandidatesProfile extends Component{
       }
 }
 
-
-export default CandidatesProfile;
-
+export default connect(state=>state, actions)(CandidatesProfile);
 
 

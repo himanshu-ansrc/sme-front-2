@@ -1,10 +1,19 @@
 import React, {Component, Fragment} from 'react'
 import Header2 from './Partials/Header-2'
 import Footer from './Partials/Footer'
-import './Partials/Externals.js'
+import {connect} from 'react-redux'
+import * as actions from '../actions'
 
 
 class CandidatesList extends Component{
+	  constructor(){
+	  	 super();
+	  }
+	  componentDidMount(){
+	  	 this.props.candidates_list(null, ()=>{
+       	    console.log(this.props)
+        })     
+	  }
       render(){
       	 return(
             <Fragment>
@@ -27,7 +36,13 @@ class CandidatesList extends Component{
 				            <div className="breadcrumb-form">
 				              <form action="candidate.html#">
 				                <input type="text" placeholder="Enter Keywords"  />
-				                <button><i data-feather="search"></i></button>
+				                <button>
+									<svg
+										xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+										<circle cx="11" cy="11" r="8"></circle>
+										<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+									</svg>
+								</button>
 				              </form>
 				            </div>
 				          </div>
@@ -40,15 +55,10 @@ class CandidatesList extends Component{
 				        <div className="row no-gutters">
 				          <div className="col">
 				            <div className="candidate-container">
-				              <div className="filtered-candidate-wrapper">
-				                <div className="candidate-view-controller-wrapper">
+				             {this.props.candidates
+				              ? (<div className="filtered-candidate-wrapper">
+                                    <div className="candidate-view-controller-wrapper">
 				                  <div className="candidate-view-controller">
-				                    <div className="controller list active">
-				                      <i data-feather="menu"></i>
-				                    </div>
-				                    <div className="controller grid">
-				                      <i data-feather="grid"></i>
-				                    </div>
 				                    <div className="candidate-view-filter">
 				                      <select className="selectpicker">
 				                        <option defaultValue="">Most Recent</option>
@@ -58,200 +68,42 @@ class CandidatesList extends Component{
 				                    </div>
 				                  </div>
 				                  <div className="showing-number">
-				                    <span>Showing 1–12 of 28 Jobs</span>
+				                    <span>Showing 1–10 of 280 Results</span>
 				                  </div>
 				                </div>
 				                <div className="candidate-filter-result">
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-1.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Lula Wallace</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Senior UI / UX Designer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>New York City</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-2.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Hertha A. Sullivan</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>IT Junior</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Washington, D.C.</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-3.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">David Johnston</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Accounting Manager</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>San Francisco</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-4.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Robert Hayes</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>UI Designer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>New York City</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-5.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Micheal N. Taylor</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>ios developer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Los Angeles</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-6.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Marjorie Huber</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Graphics Designer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Seattle</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-7.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">James C. Elliott</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Content Writer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>New York City</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-10.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Guy Appel</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Engineer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Baltimore</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-8.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Mario Havens</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Leader IT engineer</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Washington, D.C.</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
-				                  <div className="candidate">
-				                    <div className="thumb">
-				                      <a href="candidate.html#">
-				                        <img src="images/candidate/thumb-9.jpg" className="img-fluid" alt="" />
-				                      </a>
-				                    </div>
-				                    <div className="body">
-				                      <div className="content">
-				                        <h4><a href="candidate-details.html">Matthew Ruiz</a></h4>
-				                        <div className="info">
-				                          <span className="work-post"><a href="candidate.html#"><i data-feather="check-square"></i>Web Develper</a></span>
-				                          <span className="location"><a href="candidate.html#"><i data-feather="map-pin"></i>Philadelphia</a></span>
-				                        </div>
-				                      </div>
-				                      <div className="button-area">
-				                        <a href="candidate.html#">View Resume</a>
-				                      </div>
-				                    </div>
-				                  </div>
+                                  {this.props.candidates.map((result)=>{
+                                  	 return(
+						                  <div className="candidate">
+						                    <div className="thumb">
+						                      <a href="candidate.html#">
+						                        <img src={result.profile_pic} className="img-fluid" alt="" />
+						                      </a>
+						                    </div>
+						                    <div className="body">
+						                      <div className="content">
+						                        <h4><a href={'/detail-candidates/'+result._id}>{result.name}</a></h4>
+						                        <div className="info">
+						                          <span className="work-post"><a href="candidate.html#">
+						                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+						                              {result.skills.primary}</a></span>
+						                             <span className="location"><a href="" className="text-capitalize">
+                                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+						                             {result.location.value}</a></span>
+						                        </div>
+						                      </div>
+						                      <div className="button-area">
+						                        <a href="candidate.html#">View Avalibility</a>
+						                      </div>
+						                    </div>
+						                  </div>
+                                  	 )
+                                  })
+
+                                  }
+
+
+
 				                </div>
 				                <div className="pagination-list text-center">
 				                  <nav className="navigation pagination">
@@ -265,7 +117,25 @@ class CandidatesList extends Component{
 				                    </div>
 				                  </nav>                
 				                </div>
-				              </div>
+				              	</div>)
+				              :  (
+				              	  <div className="filtered-candidate-wrapper">
+                                    <div className="memeimage-loader-container">
+                                       <div id="memeimage-loader" className="loader-circular">
+                                       </div>
+                                    </div>
+				              	  </div>
+				              	)
+				             }
+				             
+                               
+
+                               
+				                
+
+
+
+
 				              <div className="candidate-filter-wrapper">
 				                <div className="selected-options same-pad">
 				                  <div className="selection-title">
@@ -306,12 +176,40 @@ class CandidatesList extends Component{
 				                </div>
 				                <div data-id="candidate-type" className="candidate-filter same-pad candidate-type">
 				                  <h4 className="option-title">Job Type</h4>
-				                  <ul>
-				                    <li className="full-time"><i data-feather="clock"></i><a href="candidate.html#" data-attr="Full Time">Full Time</a></li>
-				                    <li className="part-time"><i data-feather="clock"></i><a href="candidate.html#" data-attr="Part Time">Part Time</a></li>
-				                    <li className="freelance"><i data-feather="clock"></i><a href="candidate.html#" data-attr="Freelance">Freelance</a></li>
-				                    <li className="temporary"><i data-feather="clock"></i><a href="candidate.html#" data-attr="Temporary">Temporary</a></li>
-				                  </ul>
+										<ul>
+											<li class="full-time">
+												<svg
+													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+													<circle cx="12" cy="12" r="10"></circle>
+													<polyline points="12 6 12 12 16 14"></polyline>
+												</svg>
+												<a href="candidate.html#" data-attr="Full Time">Full Time</a>
+											</li>
+											<li class="part-time">
+												<svg
+													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+													<circle cx="12" cy="12" r="10"></circle>
+													<polyline points="12 6 12 12 16 14"></polyline>
+												</svg>
+												<a href="candidate.html#" data-attr="Part Time">Part Time</a>
+											</li>
+											<li class="freelance">
+												<svg
+													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+													<circle cx="12" cy="12" r="10"></circle>
+													<polyline points="12 6 12 12 16 14"></polyline>
+												</svg>
+												<a href="candidate.html#" data-attr="Freelance">Freelance</a>
+											</li>
+											<li class="temporary">
+												<svg
+													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+													<circle cx="12" cy="12" r="10"></circle>
+													<polyline points="12 6 12 12 16 14"></polyline>
+												</svg>
+												<a href="candidate.html#" data-attr="Temporary">Temporary</a>
+											</li>
+						                </ul>
 				                </div>
 				                <div data-id="experience" className="candidate-filter same-pad experience">
 				                  <h4 className="option-title">Experience</h4>
@@ -377,8 +275,7 @@ class CandidatesList extends Component{
       }
 }
 
-
-export default CandidatesList;
+export default connect(state=>state, actions)(CandidatesList);
 
 
 
