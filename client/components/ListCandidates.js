@@ -127,14 +127,6 @@ class CandidatesList extends Component{
 				              	  </div>
 				              	)
 				             }
-				             
-                               
-
-                               
-				                
-
-
-
 
 				              <div className="candidate-filter-wrapper">
 				                <div className="selected-options same-pad">

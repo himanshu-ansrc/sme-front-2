@@ -215,6 +215,10 @@ a:focus {
   padding-top: 60px;
 }
 
+.padding-top-60 {
+  padding-top: 60px;
+}
+
 .padding-bottom-60 {
   padding-bottom: 60px;
 }
@@ -4096,10 +4100,6 @@ a:focus {
   padding: 30px;
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 3px;
-  background-image: -webkit-gradient(linear, right top, left top, from(rgba(247, 249, 252, 0)), to(#f7f9fc));
-  background-image: -webkit-linear-gradient(right, rgba(247, 249, 252, 0), #f7f9fc);
-  background-image: -o-linear-gradient(right, rgba(247, 249, 252, 0), #f7f9fc);
-  background-image: linear-gradient(to left, rgba(247, 249, 252, 0), #f7f9fc);
 }
 
 .information h4 {
@@ -9655,4 +9655,37 @@ header .absolute-nav {
   .policy-tab .nav-tabs .nav-item + .nav-item {
     margin-top: 15px;
   }
+}
+
+
+
+
+
+
+
+.information-and-contact .information ul li.active {
+    color: #6f7484;
+}
+.information-and-contact .information ul li + li {
+    margin-top: 10px;
+}
+.information-and-contact .information ul li {
+    font-size: 1.4rem;
+    color: #bdbdbd;
+    position: relative;
+    padding-left: 30px;
+}
+
+.information-and-contact .information ul li.active:before {
+    color: #19bb4c;
+}
+
+.information-and-contact .information ul li:before {
+    content: '\f058';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    position: absolute;
+    font-size: 1.2rem;
+    top: 2px;
+    left: 0;
 }
