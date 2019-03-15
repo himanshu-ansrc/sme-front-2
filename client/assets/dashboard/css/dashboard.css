@@ -65,8 +65,9 @@
       font-size: 1.3rem;
       line-height: 1;
       margin-bottom: 0; }
-  .dashboard-sidebar .dashboard-menu {
-    padding-top: 20px; }
+    .dashboard-sidebar .dashboard-menu {
+        
+     }
     .dashboard-sidebar .dashboard-menu ul {
       padding: 0;
       padding-bottom: 10px;

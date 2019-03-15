@@ -10,6 +10,8 @@ import '../../assets/assets/css/owl.carousel.min.css'
 import '../../assets/assets/css/jquery.nstSlider.min.css'
 import '../../assets/css/main.css'
 import '../../assets/css/style.css'
+import '../../assets/dashboard/css/dashboard.css'
+
 
 
 //FOOTER 

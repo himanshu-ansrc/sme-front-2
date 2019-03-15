@@ -19,7 +19,7 @@ class CandidatesProfile extends Component{
       	 return(
             <Fragment>
                    <Header2/>
-				    <div className="alice-bg padding-top-35 section-padding-bottom">
+				    <div className="alice-bg padding-top-bottom-20 section-padding-bottom">
 				      <div className="container">
 				        <div className="row">
 				          <div className="col">                           
@@ -260,14 +260,7 @@ class CandidatesProfile extends Component{
 				              	  </div>
 				               )
                             }
-
-
-
-
-
 				            </div>
-
-
 				          </div>
 				        </div>
 				      </div>

@@ -4874,7 +4874,7 @@ header .absolute-nav {
 }
 
 .header-top {
-  padding: 20px 0;
+  padding: 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5601,7 +5601,7 @@ header .absolute-nav {
     display: block;
   }
   .header-top {
-    margin-bottom: 8px;
+    /*margin-bottom: 8px;*/
   }
   .header-top .logo-area a img {
     height: 43px;
@@ -9563,12 +9563,10 @@ header .absolute-nav {
    color: #6f7484 !important;
 }
 
-.padding-top-35{
-   padding-top:35px;
+.padding-top-bottom-20{
+   padding:20px 0;
 } 
-.padding-bottom-35{
-  padding-bottom:35px;
-}
+
 
 @media all and (max-width: 991px) {
   .payment-summery {

@@ -33,7 +33,12 @@ export default () => {
           <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.0.2/tinymce.min.js"></script>
           <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
           <script src="http://themerail.com/html/oficiona/js/custom.js"></script>
+
+          <script src="http://themerail.com/dashboard/js/dashboard.js"></script>
+          <script src="http://themerail.com/dashboard/js/datePicker.js"></script>
+          <script src="http://themerail.com/dashboard/js/upload-input.js"></script>
           <script src="http://themerail.com/html/oficiona/js/map.js"></script>
         </body>
       </html>`
