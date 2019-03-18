@@ -145,7 +145,7 @@ export const skillsAndLocations = (cb)=>{
                const result = await axios.get(`${CONFIG.API_URL}/skills_and_locations`);
                dispatch({
                  type: SKILLS_AND_LOCATIONS,
-                 payload: result['data']
+                 payload: result['data']['data']
 	           })
 	           cb();
 	   	    }catch(e){
