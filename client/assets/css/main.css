@@ -9555,6 +9555,11 @@ header .absolute-nav {
   margin-right: 5px;
 }
 
+.main-header-nav{
+  max-width: 1124px;
+  margin: auto;
+}
+
 .mrgn-ryt-30{
    margin-right: 30px;
 }

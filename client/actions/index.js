@@ -1,4 +1,5 @@
-import {LOGIN_USER, AUTH_USER, ADMIN_TYPE, ACTION_TYPE, LIST_CANDIDATES} from './types.js'
+import {LOGIN_USER, AUTH_USER, ADMIN_TYPE, SKILLS_AND_LOCATIONS,
+	    ACTION_TYPE, LIST_CANDIDATES} from './types.js'
 import CONFIG from '../../config';
 import axios from 'axios';
 
@@ -8,6 +9,7 @@ export const login_user = ({email, password}, cb)=>{
                const result = await axios.post(`${CONFIG.API_URL}/login`, {
                	  email , password
                });
+               console.log(result)
                dispatch({
                  type: LOGIN_USER,
                  payload: result['data']
@@ -116,6 +118,45 @@ export const  candidates_list = (params, cb)=>{
 	   	    }
 	 };
 }
+
+export const create_sme_request = (params, cb)=>{
+	   return async (dispatch)=>{
+	   	    try{
+               const result = await axios.post(`${CONFIG.API_URL}/create-request`, params);
+               console.log(result)
+               dispatch({
+                 type: CREATE_REQUEST,
+                 payload: result['data']
+	           })
+	           cb();
+	   	    }catch(e){
+               dispatch({
+                 type: CREATE_REQUEST,
+                 payload: e
+	           })
+	   	    }
+	   };
+}
+
+
+export const skills_and_locations = (cb)=>{
+	   return async (dispatch)=>{
+	   	    try{
+               const result = await axios.get(`${CONFIG.API_URL}/skills_and_locations`);
+               dispatch({
+                 type: SKILLS_AND_LOCATIONS,
+                 payload: result['data']
+	           })
+	           cb();
+	   	    }catch(e){
+               dispatch({
+                 type: SKILLS_AND_LOCATIONS,
+                 payload: e
+	           })
+	   	    }
+	   };
+}
+
 
 
 

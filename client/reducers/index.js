@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import {admin_type, admin_action, candidates} from './reducers'
+import {admin, admin_action, candidates, new_request, skills_and_locations} from './reducers'
 
 export default combineReducers({
-      admin: admin_type,
+      admin,
       admin_action,
-      candidates
+      candidates,
+      sme_request: new_request,
+      skills_and_locations
 })

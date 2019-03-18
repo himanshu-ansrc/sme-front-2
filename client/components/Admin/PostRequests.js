@@ -8,16 +8,13 @@ class PostRequests extends Component{
 	  constructor(){
 	  	 super();
 	  }
-	  componentDidMount(){
-	  	 this.props.candidates_list(null, ()=>{
-       	    console.log(this.props)
-        })     
+	  componentDidMount(){  
 	  }
       render(){
       	  return(
              <Fragment>
               		<div className="dashboard-content-wrapper">
-					    <form action="employer-dashboard-post-job.html#" className="dashboard-form job-post-form">
+					    <form className="dashboard-form job-post-form">
 						 <div className="dashboard-section basic-info-input">
 							<h4>
 								<svg
@@ -40,7 +37,7 @@ class PostRequests extends Component{
 									<div className="col-md-6">
 										<div className="form-group">
 											<select className="form-control">
-												<option>Select Category</option>
+												<option>Select Skills</option>
 												<option>Accounting / Finance</option>
 												<option>Health Care</option>
 												<option>Garments / Textile</option>
@@ -51,7 +48,14 @@ class PostRequests extends Component{
 									</div>
 									<div className="col-md-6">
 									  <div className="form-group">
-										 <input type="text" className="form-control" placeholder="Job Location" />
+									  		<select className="form-control">
+												<option>Location</option>
+												<option>Accounting / Finance</option>
+												<option>Health Care</option>
+												<option>Garments / Textile</option>
+												<option>Telecommunication</option>
+											</select>
+											<i className="fa fa-caret-down"></i>
 									  </div>
 									</div>
 									<div className="col-md-6">
@@ -98,22 +102,7 @@ class PostRequests extends Component{
 									</div>
 									<div className="col-md-6">
 										<div className="form-group">
-											<select className="form-control">
-												<option>Gender</option>
-												<option>Male</option>
-												<option>Female</option>
-											</select>
-											<i className="fa fa-caret-down"></i>
-										</div>
-									</div>
-									<div className="col-md-6">
-										<div className="form-group">
 											<input type="text" className="form-control" placeholder="Vacancy" />
-										</div>
-									</div>
-									<div className="col-md-6">
-										<div className="form-group datepicker">
-												<input type="date" className="form-control" />
 										</div>
 									</div>
 									</div>

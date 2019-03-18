@@ -26,7 +26,7 @@ class CandidatesProfile extends Component{
 				            <div className="candidate-details">
 				             {this.props.candidates
                               ?  
-                             (<Fragment>
+                              (<Fragment>
 				                   	{this.props.candidates.map((result)=>{
                                        return (
                                             <Fragment>
