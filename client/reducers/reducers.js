@@ -1,8 +1,8 @@
 import {ADMIN_TYPE, LOGIN_USER, ACTION_TYPE, LIST_CANDIDATES, SKILLS_AND_LOCATIONS, CREATE_REQUEST} from '../actions/types.js'
 
-export const admin_type =  (state=null, action)=>{
+export const admin =  (state=null, action)=>{
      switch(action.type){
-         case ADMIN_TYPE:
+         case LOGIN_USER:
 	         return action.payload
          default:
            return state;

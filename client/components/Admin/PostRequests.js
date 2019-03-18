@@ -9,6 +9,9 @@ class PostRequests extends Component{
 	  	 super();
 	  }
 	  componentDidMount(){  
+	  	  this.props.skillsAndLocations(()=>{
+               console.log(this.props);
+	  	  });
 	  }
       render(){
       	  return(

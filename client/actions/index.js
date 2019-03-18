@@ -139,7 +139,7 @@ export const create_sme_request = (params, cb)=>{
 }
 
 
-export const skills_and_locations = (cb)=>{
+export const skillsAndLocations = (cb)=>{
 	   return async (dispatch)=>{
 	   	    try{
                const result = await axios.get(`${CONFIG.API_URL}/skills_and_locations`);
