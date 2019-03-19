@@ -15,6 +15,7 @@ class MainRouter extends Component {
         <Route path="/list-candidates" component={ListCandidates}/>
         <Route path="/detail-candidates/:user_id" component={DetailCandidates}/>
         <Route path="/admin" component={AdminDashboard}/>
+        <Route path="/admin/list-requests" component={AdminDashboard}/>
       </Switch>
     </Fragment>)
   }

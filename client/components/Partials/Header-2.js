@@ -2,6 +2,7 @@ import React, {Component, Fragment} from 'react'
 import './Externals.js'
 import {connect}  from 'react-redux'
 import * as actions from '../../actions'
+import { Link , Redirect} from 'react-router-dom'
 
 class Header2 extends Component{
 	  componentDidMount(){
@@ -62,23 +63,7 @@ class Header2 extends Component{
 						                  </div>
 						                </div>
 						                <div className="dropdown header-top-account">
-						                  <a href="candidate.html#" className="account-button">My Account</a>
-						                  <div className="account-card">
-						                    <div className="header-top-account-info">
-						                      <a href="candidate.html#" className="account-thumb">
-						                        <img src="images/account/thumb-1.jpg" className="img-fluid" alt="" />
-						                      </a>
-						                      <div className="account-body">
-						                        <h5><a href="candidate.html#">Robert Chavez</a></h5>
-						                        <span className="mail">chavez@domain.com</span>
-						                      </div>
-						                    </div>
-						                    <ul className="account-item-list">
-						                      <li><a href="candidate.html#"><span className="ti-user"></span>Account</a></li>
-						                      <li><a href="candidate.html#"><span className="ti-settings"></span>Settings</a></li>
-						                      <li><a href="candidate.html#"><span className="ti-power-off"></span>Log Out</a></li>
-						                    </ul>
-						                  </div>
+						                  <a href="http://localhost:3000/admin" onClick={()=>{window.location.href="/admin";}} className="account-button">My Account</a>
 						                </div>
 						              </div>
 						            </div>

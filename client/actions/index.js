@@ -1,5 +1,5 @@
 import {LOGIN_USER, AUTH_USER, ADMIN_TYPE, SKILLS_AND_LOCATIONS,
-	    ACTION_TYPE, LIST_CANDIDATES} from './types.js'
+	    ACTION_TYPE, LIST_CANDIDATES, CREATE_REQUEST, LIST_PROJECTS} from './types.js'
 import CONFIG from '../../config';
 import axios from 'axios';
 
@@ -119,11 +119,33 @@ export const  candidates_list = (params, cb)=>{
 	 };
 }
 
+
+// export const  listProjects = (params, cb)=>{
+// 	   return async (dispatch)=>{
+// 	   	    try{
+//                const result = await axios.get(`${CONFIG.API_URL}/list-projects`, {});
+//                dispatch({
+//                  type: LIST_PROJECTS,
+//                  payload: result['data']
+// 	           })
+// 	           cb()
+// 	   	    }catch(e){
+//                dispatch({
+//                  type: LIST_PROJECTS,
+//                  payload: null
+// 	           })
+// 	   	    }
+// 	 };
+// }
+
+
+
+
+
 export const create_sme_request = (params, cb)=>{
 	   return async (dispatch)=>{
 	   	    try{
                const result = await axios.post(`${CONFIG.API_URL}/create-request`, params);
-               console.log(result)
                dispatch({
                  type: CREATE_REQUEST,
                  payload: result['data']

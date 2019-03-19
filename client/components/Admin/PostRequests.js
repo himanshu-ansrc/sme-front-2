@@ -13,11 +13,29 @@ class PostRequests extends Component{
                console.log(this.props);
 	  	  });
 	  }
+	  handleSubmit = (e)=>{
+          e.preventDefault();
+          const obj = {
+          	  client_id : 2345,
+              project_name: (e.target.project_name.value).trim(),
+          	  skills : [(e.target.project_skills.value).trim()],
+          	  project_description: (e.target.project_description.value).trim(),
+          	  location: (e.target.project_location.value).trim(),
+          	  vacancies: (e.target.project_vacancies.value).trim(),
+          	  budget: (e.target.project_budget.value).trim(),
+          	  experience: (e.target.project_exp.value).trim(),
+          	  job_type: (e.target.job_type.value).trim(),
+          	  timeline: (e.target.project_timeline.value).trim(),
+          	  qualification : (e.target.project_qualification.value).trim(),
+          }
+          this.props.create_sme_request(obj, ()=>{
+          	  console.log(this.props)
+          })
+	  }
       render(){
       	  return(
              <Fragment>
-              		<div className="dashboard-content-wrapper">
-					    <form className="dashboard-form job-post-form">
+					    <form className="dashboard-form job-post-form" onSubmit={this.handleSubmit}>
 						 <div className="dashboard-section basic-info-input">
 							<h4>
 								<svg
@@ -30,7 +48,7 @@ class PostRequests extends Component{
 							<div className="form-group row">
 								<label className="col-md-3 col-form-label">Job Title</label>
 								<div className="col-md-9">
-									<input type="text" className="form-control" placeholder="Your job title here" />
+									<input type="text" className="form-control" name="project_name" placeholder="Your job title here" />
 								</div>
 							</div>
 							<div className="row">
@@ -39,73 +57,87 @@ class PostRequests extends Component{
 								<div className="row">
 									<div className="col-md-6">
 										<div className="form-group">
-											<select className="form-control">
-												<option>Select Skills</option>
-												<option>Accounting / Finance</option>
-												<option>Health Care</option>
-												<option>Garments / Textile</option>
-												<option>Telecommunication</option>
+											<select className="form-control" name="project_skills">
+											    <option value="">Select Skills</option>
+											    {this.props.skills_and_locations && this.props.skills_and_locations.skills.map((response)=>{
+											    	 return <option key={response.id} value={response.id}>{response.value}</option>
+											    })}
 											</select>
 											<i className="fa fa-caret-down"></i>
 										</div>
 									</div>
 									<div className="col-md-6">
 									  <div className="form-group">
-									  		<select className="form-control">
-												<option>Location</option>
-												<option>Accounting / Finance</option>
-												<option>Health Care</option>
-												<option>Garments / Textile</option>
-												<option>Telecommunication</option>
+									  		<select className="form-control text-capitalize" name="project_location">
+												<option value="">Location</option>
+											    {this.props.skills_and_locations && this.props.skills_and_locations.locations.map((response)=>{
+											    	 return <option key={response.id} value={response.id}>{response.city}</option>
+											    })}
 											</select>
 											<i className="fa fa-caret-down"></i>
 									  </div>
 									</div>
 									<div className="col-md-6">
-										<div className="form-group">
-											<select className="form-control">
-												<option>Job Type</option>
-												<option>Part Time</option>
-												<option>Full Time</option>
-												<option>Temperory</option>
-												<option>Permanent</option>
-												<option>Freelance</option>
+										<div className="form-group upper-case">
+											<select className="form-control" name="job_type">
+												<option value="">Job Type</option>
+												<option value="1">Part Time</option>
+												<option value="2">Full Time</option>
+												<option value="3">Temperory</option>
+												<option value="4">Permanent</option>
+												<option value="5">Freelance</option>
 											</select>
 											<i className="fa fa-caret-down"></i>
 										</div>
 									</div>
 									<div className="col-md-6">
 										<div className="form-group">
-											<select className="form-control">
-												<option>Experience (Optional)</option>
-												<option>Less than 1 Year</option>
-												<option>2 Year</option>
-												<option>3 Year</option>
-												<option>4 Year</option>
-												<option>Over 5 Year</option>
+											<select className="form-control" name="project_exp">
+												<option value="">Experience (Optional)</option>
+												<option value="1">Less than 1 Year</option>
+												<option value="2">2 Year</option>
+												<option value="3">3 Year</option>
+												<option value="4">4 Year</option>
+												<option value="5">Over 5 Year</option>
 											</select>
 											<i className="fa fa-caret-down"></i>
 										</div>
 									</div>
 									<div className="col-md-6">
 										<div className="form-group">
-											<input type="text" className="form-control" placeholder="Salary Range" />
+											<input type="text" className="form-control" name="project_budget" placeholder="Salary Range" />
 									    </div>
 								    </div>
 									<div className="col-md-6">
 										<div className="form-group">
-											<select className="form-control">
-												<option>Qualification</option>
-												<option>Matriculation</option>
-												<option>Intermidiate</option>
-												<option>Gradute</option>
+											<select className="form-control" name="project_qualification">
+												<option value="">Qualification</option>
+												<option value="1">Matriculation</option>
+												<option value="2">Intermidiate</option>
+												<option value="3">Gradute</option>
+												<option value="4">Post Gradute</option>
 											</select>
 											<i className="fa fa-caret-down"></i>
 										</div>
 									</div>
+
 									<div className="col-md-6">
 										<div className="form-group">
-											<input type="text" className="form-control" placeholder="Vacancy" />
+											<select className="form-control" name="project_timeline">
+												<option value="">Timeline</option>
+												<option value="1">1 Month</option>
+												<option value="2">3 Months</option>
+												<option value="3">6 Months</option>
+												<option value="4">1 Year</option>
+												<option value="5">1 Year +</option>
+											</select>
+											<i className="fa fa-caret-down"></i>
+										</div>
+									</div>
+
+									<div className="col-md-6">
+										<div className="form-group">
+											<input type="text" className="form-control" placeholder="Vacancy"  name="project_vacancies" />
 										</div>
 									</div>
 									</div>
@@ -118,7 +150,7 @@ class PostRequests extends Component{
 											<div className="row">
 												<div className="col-md-12">
 													<div className="form-group">
-														<textarea className="form-control" placeholder="Requirement Summary"></textarea>
+														<textarea className="form-control" name="project_description" placeholder="Requirement Summary"></textarea>
 													</div>
 												</div>
 											</div>
@@ -132,7 +164,6 @@ class PostRequests extends Component{
 												</div>
 											</div>
 										</form>
-									</div>
              </Fragment>
       	  )
       }

@@ -139,7 +139,7 @@ class Header extends Component{
 						        <div className="row">
 						          <div className="col-12">
 						            <div className="banner-content">
-						              <h1>The Easiest Way to Find</h1>
+						              <h1>The Easiest Way to Find Jobs</h1>
 						              <div className="banner-search">
 						                <form action="home-4.html#" className="search-form">
 						                  <input type="text" placeholder="Enter Keywords" onChange={(e)=>this.setState({searchKeys: e.target.value})}/>
