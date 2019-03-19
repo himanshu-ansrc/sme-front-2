@@ -44,6 +44,32 @@
 }
 /* END  */
 
+.flex-end{
+   display: flex;
+   align-items: end;
+}
+.candidates-rating>svg{
+   width: 12px;
+   margin-right: 3px;
+}
+.candidates-rating>svg:last-child{
+   margin-right: 0;
+}
 .upper-case{
-   text-transform: uppercase;	
+   text-transform:;
+}
+
+.font-12{
+	font-size: 12px;
+}
+
+.font-13{
+   font-size: 13px;
+}
+
+.font-14{
+   font-size: 14px;
+}
+.font-1em{
+   font-size: 1em;
 }

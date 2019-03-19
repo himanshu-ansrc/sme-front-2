@@ -3586,7 +3586,7 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px;
+  padding: 20px;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
@@ -3620,7 +3620,7 @@ a:focus {
   font-size: 1.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
 }
 
 .candidate .body .content h4:hover {
@@ -9664,31 +9664,27 @@ header .absolute-nav {
 
 
 
+ul.vetting-box{
+  list-style: none;
+}
 
-
-.information-and-contact .information ul li.active {
+ul.vetting-box li.active {
     color: #6f7484;
 }
-.information-and-contact .information ul li + li {
-    margin-top: 10px;
-}
-.information-and-contact .information ul li {
-    font-size: 1.4rem;
+ul.vetting-box  li {
+    font-size: 12px;
     color: #bdbdbd;
     position: relative;
     padding-left: 30px;
 }
-
-.information-and-contact .information ul li.active:before {
+ul.vetting-box  li.active:before {
     color: #19bb4c;
-}
-
-.information-and-contact .information ul li:before {
+} 
+ul.vetting-box  li:before {
     content: '\f058';
     font-family: 'Font Awesome\ 5 Free';
     font-weight: 900;
     position: absolute;
     font-size: 1.2rem;
-    top: 2px;
     left: 0;
 }
