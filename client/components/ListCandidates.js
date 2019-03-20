@@ -128,9 +128,9 @@ class CandidatesList extends Component{
 						                      </div>
 
 											      <ul className="vetting-box">
-											         <li>Education</li>
-											         <li class="active">Certificates</li>
-											         <li>Badges</li>
+											         <li>Profile</li>
+											         <li class="active">Skills</li>
+											         <li>Tools</li>
 											      </ul>
 						                      <div className="button-area">
 						                        <a href="candidate.html#">View Avalibility</a>

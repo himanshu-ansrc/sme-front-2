@@ -204,49 +204,55 @@ class CandidatesProfile extends Component{
 								                    </div>
 								                  </div>
 								                  <div className="col-xl-4 offset-xl-1 col-lg-4">
-								                    <div className="information-and-contact">
-								                      <div className="information">
-								                        <ul>
-								                          {result.vetting.map(res=>{
-								                          	   return(
-                                                                  <Fragment>
-                                                                    <li>Education</li>
-											                        <li className="active">Experience</li>
-											                        <li className="active">Certificates</li>
-											                        <li>Badges</li>
+								                  <div class="information-and-contact">
+										                      <div class="information">
+										                         <div>
+											                        <h4>Profile</h4>
+											                        <ul>
+											                          <li><span>Category:</span> Design &amp; Creative</li>
+											                          <li><span>Location:</span> Los Angeles</li>
+											                          <li><span>Status:</span> Full-time</li>
+											                          <li><span>Experience:</span> 3 year(s)</li>
+											                          <li><span>Salary:</span> $32k - $36k</li>
+											                          <li><span>Gender:</span> Male</li>
+											                          <li><span>Age:</span> 24 Year(s)</li>
+											                          <li><span>Qualification:</span> Gradute</li>
+											                        </ul>
+										                          </div>
 
-                                                                  </Fragment>
-								                          	   )
-								                          })}
-								                          
-					
-								                        </ul>
-								                      </div>
-								                      <div className="modal fade contact-form-modal" id="exampleModal" tabIndex="-1" role="dialog" aria-hidden="true">
-								                        <div className="modal-dialog" role="document">
-								                          <div className="modal-content">
-								                            <div className="modal-body">
-								                              <h4><i data-feather="edit"></i>Contact Me</h4>
-								                              <form action="candidate-details.html#">
-								                                <div className="form-group">
-								                                  <input type="text" className="form-control" placeholder="Your Name" />
-								                                </div>
-								                                <div className="form-group">
-								                                  <input type="email" className="form-control" placeholder="Your Email" />
-								                                </div>
-								                                <div className="form-group">
-								                                  <textarea className="form-control" placeholder="Your Message"></textarea>
-								                                </div>
-								                                <button className="button">Submit</button>
-								                              </form>
-								                            </div>
-								                          </div>
-								                        </div>
+										                          <div>
+											                        <h4>Skills</h4>
+											                        <ul>
+											                          <li><span>Category:</span> Design &amp; Creative</li>
+											                          <li><span>Location:</span> Los Angeles</li>
+											                          <li><span>Status:</span> Full-time</li>
+											                          <li><span>Experience:</span> 3 year(s)</li>
+											                          <li><span>Salary:</span> $32k - $36k</li>
+											                          <li><span>Gender:</span> Male</li>
+											                          <li><span>Age:</span> 24 Year(s)</li>
+											                          <li><span>Qualification:</span> Gradute</li>
+											                        </ul>
+										                          </div>
+
+										                          <div>
+											                        <h4>Tools</h4>
+											                        <ul>
+											                          <li><span>Category:</span> Design &amp; Creative</li>
+											                          <li><span>Location:</span> Los Angeles</li>
+											                          <li><span>Status:</span> Full-time</li>
+											                          <li><span>Experience:</span> 3 year(s)</li>
+											                          <li><span>Salary:</span> $32k - $36k</li>
+											                          <li><span>Gender:</span> Male</li>
+											                          <li><span>Age:</span> 24 Year(s)</li>
+											                          <li><span>Qualification:</span> Gradute</li>
+											                        </ul>
+										                          </div>
+										                      </div>
 								                      </div>
 								                    </div>
 								                  </div>
 								                </div>
-								              </div>
+								         
 				                             </Fragment>
                                        	)
                                     })}

@@ -49,6 +49,10 @@
    align-items: end;
 }
 
+.content{
+	width:50%;
+}
+
 .candidates-name-box{
 	display: flex;
 	align-items: center;

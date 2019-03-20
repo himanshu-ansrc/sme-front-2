@@ -4106,9 +4106,13 @@ a:focus {
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  padding-bottom: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.information>div{
+  margin-bottom: 15px;
 }
 
 .information ul {
@@ -9666,6 +9670,7 @@ header .absolute-nav {
 
 ul.vetting-box{
   list-style: none;
+  padding-left: 0;
 }
 
 ul.vetting-box li.active {
@@ -9675,7 +9680,7 @@ ul.vetting-box  li {
     font-size: 12px;
     color: #bdbdbd;
     position: relative;
-    padding-left: 30px;
+    padding-left: 25px;
 }
 ul.vetting-box  li.active:before {
     color: #19bb4c;
