@@ -3,6 +3,7 @@ import Header2 from './Partials/Header-2'
 import Footer from './Partials/Footer'
 import PostRequests from './Admin/PostRequests'
 import ManageRequests from './Admin/ManageRequests'
+import ManageCandidates from './Admin/ManageCandidates'
 import Sidebar from './Admin/Sidebar'
 import {connect} from 'react-redux'
 import * as actions from '../actions'
@@ -64,6 +65,7 @@ class AdminDashBoard extends Component{
                         <div className="dashboard-content-wrapper">
                            {this.state.sidebarNum==1 && <PostRequests/>}
                            {this.state.sidebarNum==2 && <ManageRequests/>}
+                           {this.state.sidebarNum==3 && <ManageCandidates/>}
                         </div>
                         <Sidebar viewDashboard={(e)=>{this.setState({sidebarNum: e})}}/>
 					</div>

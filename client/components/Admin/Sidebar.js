@@ -34,7 +34,7 @@ class Sidebar extends Component{
 							</li>
 							<li>
 								<i className="fas fa-users"></i>
-								<a href="employer-dashboard-manage-candidate.html">Manage Candidates</a>
+								<a href="" id="3" onClick={this.viewDashboardContent}>Manage Candidates</a>
 							</li>
 							<li>
 								<i className="fas fa-heart"></i>
