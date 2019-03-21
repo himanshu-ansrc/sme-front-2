@@ -24,21 +24,13 @@ class Sidebar extends Component{
 					</div>
 					<div className="dashboard-menu">
 						<ul>
-							<li className="active">
-								<i className="fas fa-plus-square"></i>
-								<a  href="" id="1" onClick={this.viewDashboardContent}>Post New Job</a>
-							</li>
 							<li>
 								<i className="fas fa-briefcase"></i>
-								<a href="" id="2" onClick={this.viewDashboardContent}>Manage Jobs</a>
+								<a href="" id="2" onClick={this.viewDashboardContent}>Manage Applications</a>
 							</li>
 							<li>
 								<i className="fas fa-users"></i>
 								<a href="" id="3" onClick={this.viewDashboardContent}>Manage Candidates</a>
-							</li>
-							<li>
-								<i className="fas fa-heart"></i>
-								<a href="employer-dashboard-post-job.html#">Shortlisted Resumes</a>
 							</li>
 						</ul>
 						<ul className="delete">
