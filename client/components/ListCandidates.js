@@ -22,6 +22,13 @@ class CandidatesList extends Component{
 			}
 			return listItems;
 	  }
+	  randowCalender = ()=>{
+	  	  if(Math.floor((Math.random() * 2) + 1)==1){
+             return "https://res.cloudinary.com/smeimages/image/upload/v1553157680/screenshot-www.makemytrip.com-2019.03.21-14-07-30.png"
+	  	  }else{
+             return "https://res.cloudinary.com/smeimages/image/upload/v1553158444/screenshot-www.makemytrip.com-2019.03.21-14-03-53.png"
+	  	  }
+	  }
       render(){
       	 return(
             <Fragment>
@@ -95,7 +102,7 @@ class CandidatesList extends Component{
 						                        )}
 						                      </div>
 						                    </div>
-						                    <div className="body">
+						                    <div className="body flex-end">
 						                      <div className="content">
 						                        <h4 className="font-1em candidates-name-box"><a href={'/detail-candidates/'+result._id} className="margin-ryt-10">{result.name}</a> 
 													{this.listItems(result.cost.fixed, 
@@ -132,8 +139,8 @@ class CandidatesList extends Component{
 											         <li class="active">Skills</li>
 											         <li>Tools</li>
 											      </ul>
-						                      <div className="button-area">
-						                        <a href="candidate.html#">View Avalibility</a>
+						                      <div className="avalibility-area">
+						                         <img src={this.randowCalender()} />
 						                      </div>
 						                    </div>
 						                  </div>

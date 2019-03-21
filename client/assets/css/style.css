@@ -53,6 +53,14 @@
 	width:50%;
 }
 
+.avalibility-area{
+	width:150px;
+	height: auto;
+	box-shadow: 0.5px 0.5px 1px rgba(0,0,0,.5);
+}
+.avalibility-area > img{
+	width:100%;
+}
 .candidates-name-box{
 	display: flex;
 	align-items: center;
