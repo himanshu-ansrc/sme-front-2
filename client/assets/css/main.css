@@ -3712,16 +3712,13 @@ a:focus {
   justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
+  align-items: end;
 }
 
 .title-and-info .title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .title-and-info .title .thumb {
@@ -3737,7 +3734,7 @@ a:focus {
 .title-and-info .title .title-body h4 {
   font-size: 2.6rem;
   font-weight: 600;
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .title-and-info .title .title-body .info span {
