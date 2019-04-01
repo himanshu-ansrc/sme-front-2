@@ -1,5 +1,5 @@
 export default {
-   API_URL : 'http://localhost:8080',
+   API_URL : 'http://172.16.6.36:8080',
    TOKEN: 'token',
    DASHBOARD_CONTENT : {
        NEW_REQUEST: 1,

@@ -442,7 +442,7 @@ a:focus {
 }
 
 .banner-4 .banner-content h1 {
-  font-size: 4.2rem;
+  font-size: 3.2rem;
   margin-bottom: 20px;
 }
 
@@ -1458,7 +1458,7 @@ a:focus {
 }
 
 .filtered-job-listing-wrapper, .filtered-candidate-wrapper, .filtered-employer-wrapper {
-  padding: 40px 30px;
+  padding: 20px 25px;
   background: #ffffff;
 }
 
@@ -2035,11 +2035,11 @@ a:focus {
 }
 
 .job-listing-container .job-filter-wrapper, .candidate-container .job-filter-wrapper, .employer-container .job-filter-wrapper, .job-listing-container .candidate-filter-wrapper, .candidate-container .candidate-filter-wrapper, .employer-container .candidate-filter-wrapper, .job-listing-container .employer-filter-wrapper, .candidate-container .employer-filter-wrapper, .employer-container .employer-filter-wrapper {
-  min-width: 240px;
+  min-width: 260px;
 }
 
 .job-listing-container .filtered-job-listing-wrapper, .candidate-container .filtered-job-listing-wrapper, .employer-container .filtered-job-listing-wrapper, .job-listing-container .filtered-candidate-wrapper, .candidate-container .filtered-candidate-wrapper, .employer-container .filtered-candidate-wrapper, .job-listing-container .filtered-employer-wrapper, .candidate-container .filtered-employer-wrapper, .employer-container .filtered-employer-wrapper {
-  width: calc(100% - 240px);
+  width: calc(100% - 260px);
 }
 
 .job-listing-container .job-search-wrapper, .candidate-container .job-search-wrapper, .employer-container .job-search-wrapper {
@@ -9674,7 +9674,6 @@ ul.vetting-box li.active {
 }
 ul.vetting-box  li {
     font-size: 12px;
-    color: #bdbdbd;
     position: relative;
     padding-left: 25px;
     margin-bottom: 5px;

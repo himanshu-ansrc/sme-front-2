@@ -71,7 +71,7 @@ class CandidatesProfile extends Component{
 												     )}
 								                    </h4>
 								                    <div className="font-14 margin-botm-5">
-                                                    Web Developer</div>
+                                                    {result.title}</div>
 													<div class="info text-capitalize">
 													    <span class="candidate-designation">
 													      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
@@ -117,7 +117,7 @@ class CandidatesProfile extends Component{
 																<line x1="17" y1="18" x2="3" y2="18"></line>
 															</svg>About Me
 														</h4>
-								                      <p>Combined with a handful of model sentence structures, to generate lorem Ipsum which  It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including.</p>
+														<p>Over six years of work experience in the environment and sustainability sector. During these years, I have worked on projects  focused primarily on water management and treatment. I have also written white papers on Wastewater Management, Thermal Stratification of Water Bodies, and Stormwater Management.</p>
 								                    </div>
 								                    <div className="edication-background details-section">
 								                      <h4>
@@ -127,21 +127,18 @@ class CandidatesProfile extends Component{
 															<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
 														</svg>Education Background
 													  </h4>
-								                      <div className="education-label">
-								                        <span className="study-year">2018 - Present</span>	
-								                        <h5>Masters in Software Engineering<span>@ Engineering University</span></h5>
-								                        <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-								                      </div>
-								                      <div className="education-label">
-								                        <span className="study-year">2014 - 2018</span>
-								                        <h5>Diploma in Graphics Design<span>@ Graphic Arts Institute</span></h5>
-								                        <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-								                      </div>
-								                      <div className="education-label">
-								                        <span className="study-year">2008 - 2014</span>
-								                        <h5>Secondary School Certificate<span>@  Engineering High School</span></h5>
-								                        <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-								                      </div>
+									                      <div className="education-label">
+									                        <span className="study-year">2012 – 2009</span>	
+									                        <h5>Doctorate in Environmental Sustainability<span>@ Lloyd University</span></h5>
+									                      </div>
+									                      <div className="education-label">
+									                        <span className="study-year">2006 – 2008</span>
+									                        <h5>Master's Degree in Environmental Science<span>@ Frank Taylor College of Environment and Forestry</span></h5>
+									                      </div>
+									                      <div className="education-label">
+									                        <span className="study-year">2002 - 2005</span>
+									                        <h5>Bachelor's Degree in Environmental Science<span>@  Scottsdale University</span></h5>
+									                      </div>
 								                    </div>
 								                    <div className="experience details-section">
 								                      <h4>
@@ -152,75 +149,16 @@ class CandidatesProfile extends Component{
 														</svg>Work Experiance
 													  </h4>
 								                      <div className="experience-section">
-								                        <span className="service-year">2016 - Present</span>
-								                        <h5>Lead UI/UX Designer<span>@ Codepassengers LTD</span></h5>
-								                        <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
+								                        <span className="service-year">December 2015 – Present</span>
+								                        <h5>Senior Environmental Scientist<span>@ Envo Engineering LLC</span></h5>
 								                      </div>
 								                      <div className="experience-section">
-								                        <span className="service-year">2012 - 2016</span>
-								                        <h5>Former Graphic Designer<span>@ Graphicreeeo CO</span></h5>
-								                        <p>Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage</p>
-								                      </div>
-								                    </div>
-								                    <div className="professonal-skill details-section">
-								                      <h4>
-															<svg
-																xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather">
-																<path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
-																<line x1="16" y1="8" x2="2" y2="22"></line>
-																<line x1="17" y1="15" x2="9" y2="15"></line>
-															</svg>Professional Skill
-													  </h4>
-								                      <p>Combined with a handful of model sentence structures, to generate lorem Ipsum which  It has survived not only five centuries, but also the leap into electronic typesetting</p>
-								                      <div className="progress-group">
-								                        <div className="progress-item">
-								                          <div className="progress-head">
-								                            <p className="progress-on">Photoshop</p>
-								                          </div>
-								                          <div className="progress-body">
-								                            <div className="progress">
-								                              <div className="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style={{'width': '0'}}></div>
-								                            </div>
-								                            <p className="progress-to">70%</p>
-								                          </div>
-								                        </div>
-								                        <div className="progress-item">
-								                          <div className="progress-head">
-								                            <p className="progress-on">HTML/CSS</p>
-								                          </div>
-								                          <div className="progress-body">
-								                            <div className="progress">
-								                              <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style={{'width': '0'}}></div>
-								                            </div>
-								                            <p className="progress-to">90%</p>
-								                          </div>
-								                        </div>
-								                        <div className="progress-item">
-								                          <div className="progress-head">
-								                            <p className="progress-on">JavaScript</p>
-								                          </div>
-								                          <div className="progress-body">
-								                            <div className="progress">
-								                              <div className="progress-bar" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100" style={{'width': '0'}}></div>
-								                            </div>
-								                            <p className="progress-to">74%</p>
-								                          </div>
-								                        </div>
-								                        <div className="progress-item">
-								                          <div className="progress-head">
-								                            <p className="progress-on">PHP</p>
-								                          </div>
-								                          <div className="progress-body">
-								                            <div className="progress">
-								                              <div className="progress-bar" role="progressbar" aria-valuenow="86" aria-valuemin="0" aria-valuemax="100" style={{'width': '0'}}></div>
-								                            </div>
-								                            <p className="progress-to">86%</p>
-								                          </div>
-								                        </div>
+								                        <span className="service-year">July 2013 – October 2015</span>
+								                        <h5>Environmental Consultant<span>@ Greenrook Inc.</span></h5>
 								                      </div>
 								                    </div>
 								                    <div className="special-qualification details-section">
-								                      <h4>
+								                       <h4>
 														<svg
 															xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gift">
 															<polyline points="20 12 20 22 4 22 4 12"></polyline>
@@ -228,14 +166,15 @@ class CandidatesProfile extends Component{
 															<line x1="12" y1="22" x2="12" y2="7"></line>
 															<path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
 															<path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
-														</svg>Special Qualification
-													</h4>
-								                      <ul>
-								                        <li>5 years+ experience designing and building products.</li>
-								                        <li>Skilled at any Kind Design Tools.</li>
-								                        <li>Passion for people-centered design, solid intuition.</li>
-								                        <li>Hard Worker & Quick Lerner.</li>
-								                      </ul>
+														</svg>Special Skills
+													   </h4>
+									                      <ul>
+									                       <li>Strong writing and researching skills</li>
+														   <li>Excellent oral and written communication skills in German and English</li>
+														   <li>Strong analytic skills and attention to detail</li>
+														   <li>Dynamic and adaptive to global collaborative environments</li>
+														   <li>Ability to work independently and as part of a team</li>
+									                      </ul>
 								                    </div>
 								                  </div>
 								                  <div className="col-xl-4 offset-xl-1 col-lg-4">
@@ -243,61 +182,19 @@ class CandidatesProfile extends Component{
 										                      <div class="information">
 										                         <div>
 											                        <h4 className="flex-center">
-<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
-viewBox="0 0 482.9 482.9" className="svg-icon-15 margin-ryt-5" style={{"fill": "#332e2e","enable-background":"new 0 0 482.9 482.9"}}>
-	<g>
-		<path d="M239.7,260.2c0.5,0,1,0,1.6,0c0.2,0,0.4,0,0.6,0c0.3,0,0.7,0,1,0c29.3-0.5,53-10.8,70.5-30.5    c38.5-43.4,32.1-117.8,31.4-124.9c-2.5-53.3-27.7-78.8-48.5-90.7C280.8,5.2,262.7,0.4,242.5,0h-0.7c-0.1,0-0.3,0-0.4,0h-0.6    c-11.1,0-32.9,1.8-53.8,13.7c-21,11.9-46.6,37.4-49.1,91.1c-0.7,7.1-7.1,81.5,31.4,124.9C186.7,249.4,210.4,259.7,239.7,260.2z     M164.6,107.3c0-0.3,0.1-0.6,0.1-0.8c3.3-71.7,54.2-79.4,76-79.4h0.4c0.2,0,0.5,0,0.8,0c27,0.6,72.9,11.6,76,79.4    c0,0.3,0,0.6,0.1,0.8c0.1,0.7,7.1,68.7-24.7,104.5c-12.6,14.2-29.4,21.2-51.5,21.4c-0.2,0-0.3,0-0.5,0l0,0c-0.2,0-0.3,0-0.5,0    c-22-0.2-38.9-7.2-51.4-21.4C157.7,176.2,164.5,107.9,164.6,107.3z"/>
-		<path d="M446.8,383.6c0-0.1,0-0.2,0-0.3c0-0.8-0.1-1.6-0.1-2.5c-0.6-19.8-1.9-66.1-45.3-80.9c-0.3-0.1-0.7-0.2-1-0.3    c-45.1-11.5-82.6-37.5-83-37.8c-6.1-4.3-14.5-2.8-18.8,3.3c-4.3,6.1-2.8,14.5,3.3,18.8c1.7,1.2,41.5,28.9,91.3,41.7    c23.3,8.3,25.9,33.2,26.6,56c0,0.9,0,1.7,0.1,2.5c0.1,9-0.5,22.9-2.1,30.9c-16.2,9.2-79.7,41-176.3,41    c-96.2,0-160.1-31.9-176.4-41.1c-1.6-8-2.3-21.9-2.1-30.9c0-0.8,0.1-1.6,0.1-2.5c0.7-22.8,3.3-47.7,26.6-56    c49.8-12.8,89.6-40.6,91.3-41.7c6.1-4.3,7.6-12.7,3.3-18.8c-4.3-6.1-12.7-7.6-18.8-3.3c-0.4,0.3-37.7,26.3-83,37.8    c-0.4,0.1-0.7,0.2-1,0.3c-43.4,14.9-44.7,61.2-45.3,80.9c0,0.9,0,1.7-0.1,2.5c0,0.1,0,0.2,0,0.3c-0.1,5.2-0.2,31.9,5.1,45.3    c1,2.6,2.8,4.8,5.2,6.3c3,2,74.9,47.8,195.2,47.8s192.2-45.9,195.2-47.8c2.3-1.5,4.2-3.7,5.2-6.3    C447,415.5,446.9,388.8,446.8,383.6z"/>
-	</g>
-</svg>Profile</h4>
-											                        <ul>
-											                          <li><span>Category:</span> Design &amp; Creative</li>
-											                          <li><span>Location:</span> Los Angeles</li>
-											                          <li><span>Status:</span> Full-time</li>
-											                          <li><span>Experience:</span> 3 year(s)</li>
-											                          <li><span>Salary:</span> $32k - $36k</li>
-											                          <li><span>Gender:</span> Male</li>
-											                          <li><span>Age:</span> 24 Year(s)</li>
-											                          <li><span>Qualification:</span> Gradute</li>
-											                        </ul>
-										                          </div>
-
-										                          <div>
-											                        <h4 className="flex-center">
-																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -1 401.52289 401"  className="svg-icon-15 margin-ryt-5" style={{"fill": "#212529"}}>
-																		<path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0"/>
-																		</svg>
-											                        Skills</h4>
-											                        <ul>
-											                          <li><span>Category:</span> Design &amp; Creative</li>
-											                          <li><span>Location:</span> Los Angeles</li>
-											                          <li><span>Status:</span> Full-time</li>
-											                          <li><span>Experience:</span> 3 year(s)</li>
-											                          <li><span>Salary:</span> $32k - $36k</li>
-											                          <li><span>Gender:</span> Male</li>
-											                          <li><span>Age:</span> 24 Year(s)</li>
-											                          <li><span>Qualification:</span> Gradute</li>
-											                        </ul>
-										                          </div>
-
-										                          <div>
-											                        <h4 className="flex-center">
-																		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 478.703 478.703" className="svg-icon-15 margin-ryt-5" style={{"enable-background":"new 0 0 478.703 478.703", "fill": "#212529"}}>
+																		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" 
+																		viewBox="0 0 482.9 482.9" className="svg-icon-15 margin-ryt-5" style={{"fill": "#332e2e","enable-background":"new 0 0 482.9 482.9"}}>
 																			<g>
-																				<path d="M454.2,189.101l-33.6-5.7c-3.5-11.3-8-22.2-13.5-32.6l19.8-27.7c8.4-11.8,7.1-27.9-3.2-38.1l-29.8-29.8    c-5.6-5.6-13-8.7-20.9-8.7c-6.2,0-12.1,1.9-17.1,5.5l-27.8,19.8c-10.8-5.7-22.1-10.4-33.8-13.9l-5.6-33.2    c-2.4-14.3-14.7-24.7-29.2-24.7h-42.1c-14.5,0-26.8,10.4-29.2,24.7l-5.8,34c-11.2,3.5-22.1,8.1-32.5,13.7l-27.5-19.8    c-5-3.6-11-5.5-17.2-5.5c-7.9,0-15.4,3.1-20.9,8.7l-29.9,29.8c-10.2,10.2-11.6,26.3-3.2,38.1l20,28.1    c-5.5,10.5-9.9,21.4-13.3,32.7l-33.2,5.6c-14.3,2.4-24.7,14.7-24.7,29.2v42.1c0,14.5,10.4,26.8,24.7,29.2l34,5.8    c3.5,11.2,8.1,22.1,13.7,32.5l-19.7,27.4c-8.4,11.8-7.1,27.9,3.2,38.1l29.8,29.8c5.6,5.6,13,8.7,20.9,8.7c6.2,0,12.1-1.9,17.1-5.5    l28.1-20c10.1,5.3,20.7,9.6,31.6,13l5.6,33.6c2.4,14.3,14.7,24.7,29.2,24.7h42.2c14.5,0,26.8-10.4,29.2-24.7l5.7-33.6    c11.3-3.5,22.2-8,32.6-13.5l27.7,19.8c5,3.6,11,5.5,17.2,5.5l0,0c7.9,0,15.3-3.1,20.9-8.7l29.8-29.8c10.2-10.2,11.6-26.3,3.2-38.1    l-19.8-27.8c5.5-10.5,10.1-21.4,13.5-32.6l33.6-5.6c14.3-2.4,24.7-14.7,24.7-29.2v-42.1    C478.9,203.801,468.5,191.501,454.2,189.101z M451.9,260.401c0,1.3-0.9,2.4-2.2,2.6l-42,7c-5.3,0.9-9.5,4.8-10.8,9.9    c-3.8,14.7-9.6,28.8-17.4,41.9c-2.7,4.6-2.5,10.3,0.6,14.7l24.7,34.8c0.7,1,0.6,2.5-0.3,3.4l-29.8,29.8c-0.7,0.7-1.4,0.8-1.9,0.8    c-0.6,0-1.1-0.2-1.5-0.5l-34.7-24.7c-4.3-3.1-10.1-3.3-14.7-0.6c-13.1,7.8-27.2,13.6-41.9,17.4c-5.2,1.3-9.1,5.6-9.9,10.8l-7.1,42    c-0.2,1.3-1.3,2.2-2.6,2.2h-42.1c-1.3,0-2.4-0.9-2.6-2.2l-7-42c-0.9-5.3-4.8-9.5-9.9-10.8c-14.3-3.7-28.1-9.4-41-16.8    c-2.1-1.2-4.5-1.8-6.8-1.8c-2.7,0-5.5,0.8-7.8,2.5l-35,24.9c-0.5,0.3-1,0.5-1.5,0.5c-0.4,0-1.2-0.1-1.9-0.8l-29.8-29.8    c-0.9-0.9-1-2.3-0.3-3.4l24.6-34.5c3.1-4.4,3.3-10.2,0.6-14.8c-7.8-13-13.8-27.1-17.6-41.8c-1.4-5.1-5.6-9-10.8-9.9l-42.3-7.2    c-1.3-0.2-2.2-1.3-2.2-2.6v-42.1c0-1.3,0.9-2.4,2.2-2.6l41.7-7c5.3-0.9,9.6-4.8,10.9-10c3.7-14.7,9.4-28.9,17.1-42    c2.7-4.6,2.4-10.3-0.7-14.6l-24.9-35c-0.7-1-0.6-2.5,0.3-3.4l29.8-29.8c0.7-0.7,1.4-0.8,1.9-0.8c0.6,0,1.1,0.2,1.5,0.5l34.5,24.6    c4.4,3.1,10.2,3.3,14.8,0.6c13-7.8,27.1-13.8,41.8-17.6c5.1-1.4,9-5.6,9.9-10.8l7.2-42.3c0.2-1.3,1.3-2.2,2.6-2.2h42.1    c1.3,0,2.4,0.9,2.6,2.2l7,41.7c0.9,5.3,4.8,9.6,10,10.9c15.1,3.8,29.5,9.7,42.9,17.6c4.6,2.7,10.3,2.5,14.7-0.6l34.5-24.8    c0.5-0.3,1-0.5,1.5-0.5c0.4,0,1.2,0.1,1.9,0.8l29.8,29.8c0.9,0.9,1,2.3,0.3,3.4l-24.7,34.7c-3.1,4.3-3.3,10.1-0.6,14.7    c7.8,13.1,13.6,27.2,17.4,41.9c1.3,5.2,5.6,9.1,10.8,9.9l42,7.1c1.3,0.2,2.2,1.3,2.2,2.6v42.1H451.9z"/>
-																				<path d="M239.4,136.001c-57,0-103.3,46.3-103.3,103.3s46.3,103.3,103.3,103.3s103.3-46.3,103.3-103.3S296.4,136.001,239.4,136.001    z M239.4,315.601c-42.1,0-76.3-34.2-76.3-76.3s34.2-76.3,76.3-76.3s76.3,34.2,76.3,76.3S281.5,315.601,239.4,315.601z"/>
+																				<path d="M239.7,260.2c0.5,0,1,0,1.6,0c0.2,0,0.4,0,0.6,0c0.3,0,0.7,0,1,0c29.3-0.5,53-10.8,70.5-30.5    c38.5-43.4,32.1-117.8,31.4-124.9c-2.5-53.3-27.7-78.8-48.5-90.7C280.8,5.2,262.7,0.4,242.5,0h-0.7c-0.1,0-0.3,0-0.4,0h-0.6    c-11.1,0-32.9,1.8-53.8,13.7c-21,11.9-46.6,37.4-49.1,91.1c-0.7,7.1-7.1,81.5,31.4,124.9C186.7,249.4,210.4,259.7,239.7,260.2z     M164.6,107.3c0-0.3,0.1-0.6,0.1-0.8c3.3-71.7,54.2-79.4,76-79.4h0.4c0.2,0,0.5,0,0.8,0c27,0.6,72.9,11.6,76,79.4    c0,0.3,0,0.6,0.1,0.8c0.1,0.7,7.1,68.7-24.7,104.5c-12.6,14.2-29.4,21.2-51.5,21.4c-0.2,0-0.3,0-0.5,0l0,0c-0.2,0-0.3,0-0.5,0    c-22-0.2-38.9-7.2-51.4-21.4C157.7,176.2,164.5,107.9,164.6,107.3z"/>
+																				<path d="M446.8,383.6c0-0.1,0-0.2,0-0.3c0-0.8-0.1-1.6-0.1-2.5c-0.6-19.8-1.9-66.1-45.3-80.9c-0.3-0.1-0.7-0.2-1-0.3    c-45.1-11.5-82.6-37.5-83-37.8c-6.1-4.3-14.5-2.8-18.8,3.3c-4.3,6.1-2.8,14.5,3.3,18.8c1.7,1.2,41.5,28.9,91.3,41.7    c23.3,8.3,25.9,33.2,26.6,56c0,0.9,0,1.7,0.1,2.5c0.1,9-0.5,22.9-2.1,30.9c-16.2,9.2-79.7,41-176.3,41    c-96.2,0-160.1-31.9-176.4-41.1c-1.6-8-2.3-21.9-2.1-30.9c0-0.8,0.1-1.6,0.1-2.5c0.7-22.8,3.3-47.7,26.6-56    c49.8-12.8,89.6-40.6,91.3-41.7c6.1-4.3,7.6-12.7,3.3-18.8c-4.3-6.1-12.7-7.6-18.8-3.3c-0.4,0.3-37.7,26.3-83,37.8    c-0.4,0.1-0.7,0.2-1,0.3c-43.4,14.9-44.7,61.2-45.3,80.9c0,0.9,0,1.7-0.1,2.5c0,0.1,0,0.2,0,0.3c-0.1,5.2-0.2,31.9,5.1,45.3    c1,2.6,2.8,4.8,5.2,6.3c3,2,74.9,47.8,195.2,47.8s192.2-45.9,195.2-47.8c2.3-1.5,4.2-3.7,5.2-6.3    C447,415.5,446.9,388.8,446.8,383.6z"/>
 																			</g>
-																		</svg>
-											                        Tools</h4>
+																		</svg>Profile Summary</h4>
 											                        <ul>
-											                          <li><span>Category:</span> Design &amp; Creative</li>
-											                          <li><span>Location:</span> Los Angeles</li>
-											                          <li><span>Status:</span> Full-time</li>
-											                          <li><span>Experience:</span> 3 year(s)</li>
-											                          <li><span>Salary:</span> $32k - $36k</li>
-											                          <li><span>Gender:</span> Male</li>
-											                          <li><span>Age:</span> 24 Year(s)</li>
-											                          <li><span>Qualification:</span> Gradute</li>
+											                          <li><span>Work Arrangement:</span> Full-time</li>
+											                          <li><span>Experience:</span>  6 Years</li>
+											                          <li><span>Compensation Per Hour:</span> $44</li>
+											                          <li><span>Age:</span> 30 Years</li>
+											                          <li><span>Educational Qualification:</span> Doctorate</li>
 											                        </ul>
 										                          </div>
 										                      </div>
@@ -305,7 +202,6 @@ viewBox="0 0 482.9 482.9" className="svg-icon-15 margin-ryt-5" style={{"fill": "
 								                    </div>
 								                  </div>
 								                </div>
-								         
 				                             </Fragment>
                                        	)
                                     })}

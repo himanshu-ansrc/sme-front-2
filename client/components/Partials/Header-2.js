@@ -24,7 +24,7 @@ class Header2 extends Component{
 						              </div>
 						              <div className="top-nav">
 						                <div className="dropdown header-top-notification">
-						                  <a href="candidate.html#" className="notification-button">Notification</a>
+						                  <a href="candidate.html#" className="notification-button">Notifications</a>
 						                  <div className="notification-card">
 						                    <div className="notification-head">
 						                      <span>Notifications</span>

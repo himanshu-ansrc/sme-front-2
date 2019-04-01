@@ -29,6 +29,10 @@ class CandidatesList extends Component{
              return "https://res.cloudinary.com/smeimages/image/upload/v1553158444/screenshot-www.makemytrip.com-2019.03.21-14-03-53.png"
 	  	  }
 	  }
+	  randomVetting = ()=>{
+	  	  const random = Math.floor((Math.random() * 3) + 1);
+	  	  return (random==1)? "pro-in": (random==2)? "good-in":"notgood-in";
+	  }
       render(){
       	 return(
             <Fragment>
@@ -38,7 +42,7 @@ class CandidatesList extends Component{
 				        <div className="row">
 				          <div className="col-md-6">
 				            <div className="breadcrumb-area">
-				              <h1>Candidates List</h1>
+				              <h1>SME Profiles</h1>
 				              <nav aria-label="breadcrumb">
 				                <ol className="breadcrumb">
 				                  <li className="breadcrumb-item"><a href="candidate.html#">Home</a></li>
@@ -66,7 +70,7 @@ class CandidatesList extends Component{
 				    </div>
 
 				    <div className="alice-bg section-padding-bottom">
-				      <div className="container">
+				      <div className="container list-container">
 				        <div className="row no-gutters">
 				          <div className="col">
 				            <div className="candidate-container">
@@ -123,7 +127,7 @@ class CandidatesList extends Component{
 												    )}
                                                 </h4>
                                                 <div className="font-14">
-                                                    Web Developer</div>
+                                                    {result.title}</div>
 						                        <div className="info">
 						                          <span className="work-post"><a href="candidate.html#">
 						                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
@@ -133,11 +137,10 @@ class CandidatesList extends Component{
 						                             {result.location.value}</a></span>
 						                        </div>
 						                      </div>
-
 											      <ul className="vetting-box">
-											         <li>Profile</li>
-											         <li class="active">Skills</li>
-											         <li>Tools</li>
+											         <li className={this.randomVetting()}>Profile</li>
+											         <li className={this.randomVetting()}>Skills</li>
+											         <li className={this.randomVetting()}>Tools</li>
 											      </ul>
 						                      <div className="avalibility-area">
 						                         <img src={this.randowCalender()} />
@@ -186,7 +189,7 @@ class CandidatesList extends Component{
 				                </div>
 				                <div className="candidate-filter-dropdown same-pad category">
 				                  <select className="selectpicker">
-				                    <option defaultValue="">Category</option>
+				                    <option defaultValue="">Skills</option>
 				                    <option value="california">Accounting / Finance</option>
 				                    <option value="california">Education</option>
 				                    <option value="california">Design &amp; Creative</option>
@@ -214,7 +217,7 @@ class CandidatesList extends Component{
 				                  </select>
 				                </div>
 				                <div data-id="candidate-type" className="candidate-filter same-pad candidate-type">
-				                  <h4 className="option-title">Job Type</h4>
+				                  <h4 className="option-title">Work Arrangement</h4>
 										<ul>
 											<li class="full-time">
 												<svg
@@ -232,38 +235,20 @@ class CandidatesList extends Component{
 												</svg>
 												<a href="candidate.html#" data-attr="Part Time">Part Time</a>
 											</li>
-											<li class="freelance">
-												<svg
-													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-													<circle cx="12" cy="12" r="10"></circle>
-													<polyline points="12 6 12 12 16 14"></polyline>
-												</svg>
-												<a href="candidate.html#" data-attr="Freelance">Freelance</a>
-											</li>
-											<li class="temporary">
-												<svg
-													xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
-													<circle cx="12" cy="12" r="10"></circle>
-													<polyline points="12 6 12 12 16 14"></polyline>
-												</svg>
-												<a href="candidate.html#" data-attr="Temporary">Temporary</a>
-											</li>
 						                </ul>
 				                </div>
 				                <div data-id="experience" className="candidate-filter same-pad experience">
-				                  <h4 className="option-title">Experience</h4>
+				                  <h4 className="option-title">Work Experience</h4>
 				                  <ul>
 				                    <li><a href="candidate.html#" data-attr="Fresh">Fresh</a></li>
 				                    <li><a href="candidate.html#" data-attr="Less than 1 year">Less than 1 year</a></li>
-				                    <li><a href="candidate.html#" data-attr="2 Year">2 Year</a></li>
-				                    <li><a href="candidate.html#" data-attr="3 Year">3 Year</a></li>
-				                    <li><a href="candidate.html#" data-attr="4 Year">4 Year</a></li>
-				                    <li><a href="candidate.html#" data-attr="5 Year">5 Year</a></li>
-				                    <li><a href="candidate.html#" data-attr="Avobe 5 Years">Avobe 5 Years</a></li>
+				                    <li><a href="candidate.html#" data-attr="2 Year">1 – 3 years</a></li>
+				                    <li><a href="candidate.html#" data-attr="3 Year">4 – 6 years</a></li>
+				                    <li><a href="candidate.html#" data-attr="4 Year">more than 6 years</a></li>
 				                  </ul>
 				                </div>
 				                <div className="candidate-filter same-pad">
-				                  <h4 className="option-title">Salary Range</h4>
+				                  <h4 className="option-title">Compensation Per Hour</h4>
 				                  <div className="price-range-slider">
 				                    <div className="nstSlider" data-range_min="0" data-range_max="10000" 
 				                     data-cur_min="0"    data-cur_max="6130">
@@ -276,31 +261,6 @@ class CandidatesList extends Component{
 				                      </div>
 				                    </div>
 				                  </div>
-				                </div>
-				                <div data-id="post" className="candidate-filter same-pad post">
-				                  <h4 className="option-title">Date Posted</h4>
-				                  <ul>
-				                    <li><a href="candidate.html#" data-attr="Last hour">Last hour</a></li>
-				                    <li><a href="candidate.html#" data-attr="Last 24 hour">Last 24 hour</a></li>
-				                    <li><a href="candidate.html#" data-attr="Last 7 days">Last 7 days</a></li>
-				                    <li><a href="candidate.html#" data-attr="Last 14 days">Last 14 days</a></li>
-				                    <li><a href="candidate.html#" data-attr="Last 30 days">Last 30 days</a></li>
-				                  </ul>
-				                </div>
-				                <div data-id="gender" className="candidate-filter same-pad gender">
-				                  <h4 className="option-title">Gender</h4>
-				                  <ul>
-				                    <li><a href="candidate.html#" data-attr="Male">Male</a></li>
-				                    <li><a href="candidate.html#" data-attr="Female">Female</a></li>
-				                  </ul>
-				                </div>
-				                <div data-id="qualification" className="candidate-filter same-pad qualification">
-				                  <h4 className="option-title">Qualification</h4>
-				                  <ul>
-				                    <li><a href="candidate.html#" data-attr="Matriculation">Matriculation</a></li>
-				                    <li><a href="candidate.html#" data-attr="Intermidiate">Intermidiate</a></li>
-				                    <li><a href="candidate.html#" data-attr="Gradute">Gradute</a></li>
-				                  </ul>
 				                </div>
 				              </div>
 				            </div>

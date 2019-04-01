@@ -21,7 +21,7 @@ export const admin_action =  (state=null, action)=>{
 export const candidates =  (state=null, action)=>{
      switch(action.type){
          case LIST_CANDIDATES:
-           return action.payload
+           return action.payload;
          default:
            return state;
      }

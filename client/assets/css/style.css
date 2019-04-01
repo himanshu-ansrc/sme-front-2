@@ -84,6 +84,11 @@
 .candidates-rating>svg:last-child, .candidates-profile-rating>svg:last-child{
    margin-right: 0;
 }
+
+
+.list-container{
+	max-width: 1200px;
+}
 .upper-case{
    text-transform:;
 }
@@ -121,4 +126,13 @@
 .svg-icon-18{
 	width: 18px;
 	height: auto;
+}
+.pro-in{
+ color: #19bb4c;
+}
+.good-in{
+ color: #ff9247;
+}
+.notgood-in{
+  color: #bdbdbd;
 }

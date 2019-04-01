@@ -53,7 +53,7 @@ class Header extends Component{
 					          </ul>
 					          <ul className="navbar-nav ml-auto account-nav">
 					            <li className="menu-item login-popup"><button title="Title" type="button" data-toggle="modal" data-target="#exampleModalLong">Login</button></li>
-					            <li className="menu-item login-popup"><button title="Title" type="button" data-toggle="modal" data-target="#exampleModalLong2">Registration</button></li>
+					            <li className="menu-item login-popup"><button title="Title" type="button" data-toggle="modal" data-target="#exampleModalLong2">Register</button></li>
 					          </ul> 
 					        </div>
                          	)
@@ -139,7 +139,7 @@ class Header extends Component{
 						        <div className="row">
 						          <div className="col-12">
 						            <div className="banner-content">
-						              <h1>The Easiest Way to Find Jobs</h1>
+						              <h1>Find the right subject matter experts for your project</h1>
 						              <div className="banner-search">
 						                <form action="home-4.html#" className="search-form">
 						                  <input type="text" placeholder="Enter Keywords" onChange={(e)=>this.setState({searchKeys: e.target.value})}/>
@@ -147,13 +147,15 @@ class Header extends Component{
 						                  <button className="button white-bg black-txt">Advanced Search</button>
 						                </form>
 						                <div className="trending-key">
-						                  <span>Trending Keywords:</span>
-						                  <a href="home-4.html#">designer</a>
-						                  <a href="home-4.html#">php</a>
-						                  <a href="home-4.html#">ios</a>
-						                  <a href="home-4.html#">Android</a>
+						                  <span>Example :</span>
+						                  <a href="home-4.html#">Designer</a>
+						                  <a href="home-4.html#">Java Developer</a>
+						                  <a href="home-4.html#">Content Marketer</a>
+						                  <a href="home-4.html#">Astronomy</a>
+						                  <a href="home-4.html#">Math</a>
+						                  <a href="home-4.html#">Psychology</a>
+						                  <a href="home-4.html#">Law</a>
 						                  <a href="home-4.html#">Accounting</a>
-						                  <a href="home-4.html#">Management</a>
 						                </div>
 						              </div>
 						            </div>
