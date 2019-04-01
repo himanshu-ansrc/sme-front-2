@@ -225,7 +225,7 @@ class CandidatesList extends Component{
 													<circle cx="12" cy="12" r="10"></circle>
 													<polyline points="12 6 12 12 16 14"></polyline>
 												</svg>
-												<a href="candidate.html#" data-attr="Full Time">Full Time</a>
+												<a href="candidate.html#" data-attr="Full Time">Full-Time</a>
 											</li>
 											<li class="part-time">
 												<svg
@@ -233,7 +233,7 @@ class CandidatesList extends Component{
 													<circle cx="12" cy="12" r="10"></circle>
 													<polyline points="12 6 12 12 16 14"></polyline>
 												</svg>
-												<a href="candidate.html#" data-attr="Part Time">Part Time</a>
+												<a href="candidate.html#" data-attr="Part Time">Part-Time</a>
 											</li>
 						                </ul>
 				                </div>

@@ -125,7 +125,7 @@ class CandidatesProfile extends Component{
 															xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book">
 															<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
 															<path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-														</svg>Education Background
+														</svg>Educational Background
 													  </h4>
 									                      <div className="education-label">
 									                        <span className="study-year">2012 – 2009</span>	
@@ -146,7 +146,7 @@ class CandidatesProfile extends Component{
 															xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase">
 															<rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
 															<path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-														</svg>Work Experiance
+														</svg>Work Experience
 													  </h4>
 								                      <div className="experience-section">
 								                        <span className="service-year">December 2015 – Present</span>
