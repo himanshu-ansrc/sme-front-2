@@ -42,11 +42,11 @@ class CandidatesList extends Component{
 				        <div className="row">
 				          <div className="col-md-6">
 				            <div className="breadcrumb-area">
-				              <h1>SME Profiles</h1>
+				              <h1>SME List</h1>
 				              <nav aria-label="breadcrumb">
 				                <ol className="breadcrumb">
 				                  <li className="breadcrumb-item"><a href="candidate.html#">Home</a></li>
-				                  <li className="breadcrumb-item active" aria-current="page">Candidates List</li>
+				                  <li className="breadcrumb-item active" aria-current="page">SME List</li>
 				                </ol>
 				              </nav>
 				            </div>
@@ -87,7 +87,7 @@ class CandidatesList extends Component{
 				                    </div>
 				                  </div>
 				                  <div className="showing-number">
-				                    <span>Showing 1–10 of 280 Results</span>
+				                    <span>Showing 6–12 of 280 Results</span>
 				                  </div>
 				                </div>
 				                <div className="candidate-filter-result">
@@ -138,12 +138,25 @@ class CandidatesList extends Component{
 						                        </div>
 						                      </div>
 											      <ul className="vetting-box">
-											         <li className={this.randomVetting()}>Profile</li>
-											         <li className={this.randomVetting()}>Skills</li>
-											         <li className={this.randomVetting()}>Tools</li>
+                                                     {result._id=="5c7f61e6e5e5b826dcbecfb4"
+                                                      ? (
+	                                                      <Fragment>
+	                                                      	<li className="good-in">Profile</li>
+												            <li className="pro-in">Skills</li>
+												            <li className="notgood-in">Tools</li>
+	                                                      </Fragment>
+                                                      	)
+                                                      : (
+                                                         <Fragment>
+                                                           <li className={this.randomVetting()}>Profile</li>
+												           <li className={this.randomVetting()}>Skills</li>
+												           <li className={this.randomVetting()}>Tools</li>
+                                                         </Fragment>
+                                                      	)
+                                                     }
 											      </ul>
-						                      <div className="avalibility-area">
-						                         <img src={this.randowCalender()} />
+						                      <div className="">
+						                         <img src={`/calenders/${result._id}.png`} />
 						                      </div>
 						                    </div>
 						                  </div>
@@ -209,6 +222,7 @@ class CandidatesList extends Component{
 				                    <option value="california">New York City</option>
 				                    <option value="california">San Francisco</option>
 				                    <option value="california">Washington</option>
+				                    <option value="california">Dallas</option>
 				                    <option value="california">Boston</option>
 				                    <option value="california">Los Angeles</option>
 				                    <option value="california">Seattle</option>
@@ -225,7 +239,7 @@ class CandidatesList extends Component{
 													<circle cx="12" cy="12" r="10"></circle>
 													<polyline points="12 6 12 12 16 14"></polyline>
 												</svg>
-												<a href="candidate.html#" data-attr="Full Time">Full-Time</a>
+												<a href="candidate.html#" data-attr="Full Time">Full-time</a>
 											</li>
 											<li class="part-time">
 												<svg
@@ -233,24 +247,24 @@ class CandidatesList extends Component{
 													<circle cx="12" cy="12" r="10"></circle>
 													<polyline points="12 6 12 12 16 14"></polyline>
 												</svg>
-												<a href="candidate.html#" data-attr="Part Time">Part-Time</a>
+												<a href="candidate.html#" data-attr="Part Time">Part-time</a>
 											</li>
 						                </ul>
 				                </div>
 				                <div data-id="experience" className="candidate-filter same-pad experience">
 				                  <h4 className="option-title">Work Experience</h4>
 				                  <ul>
-				                    <li><a href="candidate.html#" data-attr="Fresh">Fresh</a></li>
+				                    {/*<li><a href="candidate.html#" data-attr="Fresh">Fresh</a></li>*/}
 				                    <li><a href="candidate.html#" data-attr="Less than 1 year">Less than 1 year</a></li>
 				                    <li><a href="candidate.html#" data-attr="2 Year">1 – 3 years</a></li>
 				                    <li><a href="candidate.html#" data-attr="3 Year">4 – 6 years</a></li>
-				                    <li><a href="candidate.html#" data-attr="4 Year">more than 6 years</a></li>
+				                    <li><a href="candidate.html#" data-attr="4 Year">More than 6 years</a></li>
 				                  </ul>
 				                </div>
 				                <div className="candidate-filter same-pad">
 				                  <h4 className="option-title">Compensation Per Hour</h4>
 				                  <div className="price-range-slider">
-				                    <div className="nstSlider" data-range_min="0" data-range_max="10000" 
+				                    <div className="nstSlider" data-range_min="0" data-range_max="599" 
 				                     data-cur_min="0"    data-cur_max="6130">
 				                      <div className="bar"></div>
 				                      <div className="leftGrip"></div>

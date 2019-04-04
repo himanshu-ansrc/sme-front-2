@@ -1,0 +1,365 @@
+<tutelage_tmpl name="T1">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+    <param name="AA" type="element"/>
+  </params>
+  <feedback>
+    <trigger>
+      <cond>
+        $AA$== $A*B$
+      </cond>
+    </trigger>
+    <hint>Good job!
+    </hint>
+    <hint>Well done!
+    </hint>
+  </feedback>
+  <feedback>
+    <trigger>
+      <cond>
+        $AA$== $A+B$
+      </cond>
+    </trigger>
+    <hint>What is $A$+$B$?
+    </hint>
+    <hint>Is this a multiplication problem or an addition problem?
+    </hint>
+  </feedback>
+</tutelage_tmpl>
+<problem_tmpl name="FIB1">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+    <param name="P" type="element"/>
+  </params>
+  <p>
+    Fill in the blanks to make true statements.
+  </p>
+  <p>
+    A <b>stack</b> view.
+  </p>
+  <repeat val="A">
+    <stack xoffset="2+20/B" yoffset="2+20/B">
+      <repeat val="B">
+        $P$
+      </repeat>
+    </stack>
+  </repeat>
+  <br/>
+  <p>
+    A <b>grid</b> view with a single row.
+  </p>
+  <grid columns="repeat($A$, 70px)" gap="3px 50px">
+    <repeat val="A">
+      <cell>
+        <repeat val="B">
+          $P$
+        </repeat>
+      </cell>
+    </repeat>
+  </grid>
+  <br/>
+  <p>
+    A <b>grid</b> view with multiple rows.
+  </p>
+  <grid columns="repeat($A$, 70px)" gap="3px 50px">
+    <repeat val="A*B">
+      <cell> $P$
+      </cell>
+    </repeat>
+    <repeat val="A">
+      <cell>
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" width="70px"/>
+      </cell>
+    </repeat>
+  </grid>
+  <br/>
+  <p>
+    Another <b>grid</b> view with multiple rows.
+  </p>
+  <grid columns="repeat($A$, 70px)" gap="3px 50px">
+    <repeat val="B" index="i">
+      <repeat val="A" index="j">
+        <cell>$i+1$X$j+1$</cell>
+    </repeat>
+    </repeat>
+  </grid>
+  <p>
+    <group>
+      <p>
+        $A$ groups of $B$ = <fib type="int" name="fib1"/>
+      </p>
+      <solutions>
+        <solution>
+          <cond>
+            <fib_ref name="fib1"/>== $A*B$
+          </cond>
+        </solution>
+      </solutions>
+      <tutelage_ref name="T1">
+        <bind name="A"  val="A"/>
+        <bind name="B"  val="B"/>
+        <bind name="AA" >
+          <fib_ref name="fib1"/>
+        </bind>
+      </tutelage_ref>
+    </group>
+  </p>
+</problem_tmpl>
+<problem_tmpl name="BOXING1">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+    <param name="P" type="element"/>
+  </params>
+  <p>Circle the stars below to show $A$ groups of $B$
+  </p>
+  <group>
+    <boxing name="boxing1" count="A*B" limit="Math.max(A-1,3)">
+      $P$
+    </boxing>
+    <solutions>
+      <solution>
+        <cond>
+          <boxing_ref name="boxing1" field="group"/>== $A$
+        </cond>
+        <cond>
+          <boxing_ref name="boxing1" field="size"/>== $B$
+        </cond>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<problem_tmpl name="ARRAY1">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+    <param name="P" type="element"/>
+  </params>
+  <p>Draw an array for the equation $A$ X $B$
+  </p>
+  <group>
+    <array name="array1" row="A" column="B" symbol="circle"/>
+    <solutions>
+      <solution>
+        <cond>
+          <array_ref name="array1" field="row"/>== $A$
+        </cond>
+        <cond>
+          <array_ref name="array1" field="column"/>== $B$
+        </cond>
+      </solution>
+      <solution>
+        <cond>
+          <array_ref name="array1" field="row"/>== $B$
+        </cond>
+        <cond>
+          <array_ref name="array1" field="column"/>== $A$
+        </cond>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<!-- A problem with multiple FIBs. All FIBs will be graded together since they
+    are in the same group. -->
+<problem_tmpl name="FIB2">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+  </params>
+  <p>Find the product for each.
+  </p>
+  <group>
+    <grid columns="repeat($B$, 150px)" gap="50px">
+      <repeat val="B" index="i">
+      <cell>
+        $3+2*i$ X $A$ = <fib type="int" name="fib$1+i$"/>
+      </cell>
+      </repeat>
+    </grid>
+    <solutions>
+      <solution>
+        <repeat val="B" index="i">
+        <cond>
+          <fib_ref name="fib$1+i$"/>== $(3+2*i)*A$
+        </cond>
+      </repeat>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<!-- A problem with multiple FIB groups. Each FIB will be graded independently.
+    -->
+<problem_tmpl name="FIB3">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+  </params>
+  <p>Find the product for each.
+  </p>
+  <grid columns="repeat($B$, 150px)" gap="50px">
+    <repeat val="B" index="i">
+      <group>
+        <cell>
+         $3+2*i$ X $A$ = <fib type="int" name="fib1"/>
+        </cell>
+        <solutions>
+          <solution>
+            <cond>
+              <fib_ref name="fib1"/>== $(3+2*i)*A$
+            </cond>
+          </solution>
+        </solutions>
+      </group>
+    </repeat>
+  </grid>
+</problem_tmpl>
+<!-- MCQ in grid view -->
+<problem_tmpl name="MCQ1">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+  </params>
+  <p>Select the product that equals to $(2*B-1)*A$
+  </p>
+  <group>
+    <grid columns="150px" gap="5px">
+      <repeat val="B" index="i">
+      <cell>
+        <choice name="c$1+i$"/>$3+2*i$ X $A$
+      </cell>
+      </repeat>
+    </grid>
+    <solutions>
+      <solution>
+        <repeat val="B" index="i">
+        <cond>
+          <choice_ref name="c$i+1$"/>== $i==(B-2)$
+        </cond>
+      </repeat>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<!-- MCQ in list view -->
+<problem_tmpl name="MCQ2">
+  <params>
+    <param name="A" type="int"/>
+    <param name="B" type="int"/>
+  </params>
+  <p>Select the product that equals to $(2*B-1)*A$
+  </p>
+  <group>
+    <ul>
+      <repeat val="B" index="i">
+      <li>
+        <choice name="c$1+i$"/>$3+2*i$ X $A$
+      </li>
+      </repeat>
+    </ul>
+    <solutions>
+      <solution>
+        <repeat val="B" index="i">
+        <cond>
+          <choice_ref name="c$i+1$"/>== $i==(B-2)$
+        </cond>
+      </repeat>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<problem_tmpl name="SLOT1">
+  <p>Connecting numbers that have the same factor.
+  </p>
+  <group>
+    <grid columns="150px 150px 150px" gap="50px">
+      <cell/>
+      <cell>
+        <slot name="slot1"/>33
+      </cell>
+      <cell/>
+      <cell>
+        <slot name="slot2"/>49
+      </cell>
+      <cell/>
+      <cell>
+        <slot name="slot3"/>21
+      </cell>
+      <cell/>
+      <cell>
+        <slot name="slot4"/>35
+      </cell>
+    </grid>
+    <solutions>
+      <solution>
+        <cond>
+          <slot_ref name="slot1"/>=={"slot3"}
+        </cond>
+        <cond>
+          <slot_ref name="slot2"/>=={"slot3","slot4"}
+        </cond>
+        <cond>
+          <slot_ref name="slot3"/>=={"slot1", "slot2", "slot4"}
+        </cond>
+        <cond>
+          <slot_ref name="slot4"/>=={"slot2", "slot3"}
+        </cond>
+      </solution>
+    </solutions>
+  </group>
+</problem_tmpl>
+<worksheet_tmpl name="WS1">
+  <params>
+    <param name="B" type="int"/>
+    <param name="P" type="element"/>
+  </params>
+  <problem_ref name="FIB1">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="B"/>
+    <bind name="P" val="P"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="BOXING1">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="B"/>
+    <bind name="P" val="P"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="ARRAY1">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="B"/>
+    <bind name="P" val="P"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="FIB2">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="3+Math.floor(Math.random()*3)"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="FIB3">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="3+Math.floor(Math.random()*3)"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="MCQ1">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="3+Math.floor(Math.random()*3)"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="MCQ2">
+    <bind name="A" val="7+Math.floor(Math.random()*5)"/>
+    <bind name="B" val="3+Math.floor(Math.random()*3)"/>
+  </problem_ref>
+  <hr/>
+  <problem_ref name="SLOT1">
+  </problem_ref>
+</worksheet_tmpl>
+<worksheet_ref name="WS1">
+  <bind name="B" val="4"/>
+  <bind name="P">
+    <svg height="20" width="20">
+      <polygon points="10,1 4,20 19,8 1,8 16,20" style="fill:lime;stroke:purple;stroke-width:1;fill-rule:nonzero;"/>
+    </svg>
+  </bind>
+</worksheet_ref>

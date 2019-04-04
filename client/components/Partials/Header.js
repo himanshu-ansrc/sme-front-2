@@ -147,10 +147,10 @@ class Header extends Component{
 						                  <button className="button white-bg black-txt">Advanced Search</button>
 						                </form>
 						                <div className="trending-key">
-						                  <span>Example :</span>
-						                  <a href="home-4.html#">Designer</a>
-						                  <a href="home-4.html#">Java Developer</a>
-						                  <a href="home-4.html#">Content Marketer</a>
+						                  <span>Example:</span>
+						                  <a href="home-4.html#">Thermal Engineering</a>
+						                  <a href="home-4.html#">Earth Science</a>
+						                  <a href="home-4.html#">Environmental Science</a>
 						                  <a href="home-4.html#">Astronomy</a>
 						                  <a href="home-4.html#">Math</a>
 						                  <a href="home-4.html#">Psychology</a>

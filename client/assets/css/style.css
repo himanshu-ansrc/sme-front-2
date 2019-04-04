@@ -89,6 +89,19 @@
 .list-container{
 	max-width: 1200px;
 }
+
+
+#date_here {
+			font-family: Roboto, Arial, Helvetica;
+			font-size: 14px;
+			color: #404040;
+		}
+		#calendar_icon {
+			vertical-align: middle;
+			cursor: pointer;
+		}
+
+		
 .upper-case{
    text-transform:;
 }

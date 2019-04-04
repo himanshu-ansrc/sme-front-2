@@ -13,7 +13,8 @@ import Template from './../template'
 
 const app = express()
 
-app.use(express.static('public'))
+//app.use(express.static(path.join(CURRENT_WORKING_DIR, 'public')))
+//app.use(express.static('public'))
 //end
 
 //comment out before building for production
@@ -32,6 +33,7 @@ app.use(compress())
 // enable CORS - Cross Origin Resource Sharing
 app.use(cors())
 
+app.use(express.static(path.join(CURRENT_WORKING_DIR, 'public')))
 app.use('/dist', express.static(path.join(CURRENT_WORKING_DIR, 'dist')))
 
 
